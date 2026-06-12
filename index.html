@@ -1,190 +1,120 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landhome Srbija - Retinol Krema</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LANTHOME SRBIJA</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      color: #222;
+    <style>
+
+    /* ===================================================== */
+    /* 1. HEAD - MOZGÓ FELSŐ SÁV                             */
+    /* ===================================================== */
+
+    .top-bar {
+        background-color: black;
+        color: white;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 10px 0;
+        font-size: 14px;
+        font-weight: bold;
     }
 
-    .topbar {
-      background: black;
-      color: white;
-      text-align: center;
-      padding: 8px;
-      font-size: 14px;
+    .top-bar-content {
+        display: inline-block;
+        padding-left: 100%;
+        animation: scrollText 20s linear infinite;
     }
 
-    .container {
-      max-width: 520px;
-      margin: auto;
-      background: white;
-      padding: 15px;
+    @keyframes scrollText {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-100%);
+        }
     }
 
-    .logo {
-      text-align: center;
-      margin: 15px 0;
+    /* ===================================================== */
+    /* 2. LOGÓ SZEKCIÓ                                      */
+    /* ===================================================== */
+
+    .logo-section {
+        background-color: black;
+        text-align: center;
+        padding: 20px 0;
     }
 
-    .logo img {
-      width: 140px;
+    .logo-section img {
+        width: 150px;
+        max-width: 80%;
     }
 
-    h2 {
-      margin-top: 25px;
+    /* ===================================================== */
+    /* 3. KO SMO MI? - BEMUTATKOZÁS                         */
+    /* ===================================================== */
+
+    .section {
+        padding: 30px 20px;
+        text-align: center;
     }
 
-    .box {
-      background: #eee;
-      padding: 10px;
-      margin-top: 8px;
-      border-radius: 8px;
+    .section h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
     }
 
-    img {
-      width: 100%;
-      border-radius: 10px;
-      margin-top: 10px;
+    .section p {
+        font-size: 16px;
+        line-height: 1.7;
+        max-width: 700px;
+        margin: 0 auto;
     }
 
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 6px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-
-    label {
-      font-size: 13px;
-      margin-top: 10px;
-      display: block;
-    }
-
-    .btn {
-      display: block;
-      text-align: center;
-      background: black;
-      color: white;
-      padding: 14px;
-      margin-top: 15px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .footer {
-      font-size: 12px;
-      color: gray;
-      margin-top: 30px;
-      border-top: 1px solid #ddd;
-      padding-top: 15px;
-    }
-
-    .social {
-      display: flex;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    .social img {
-      width: 30px;
-    }
-  </style>
+    </style>
 </head>
 
 <body>
 
-<div class="topbar">
-  -20% popusta za prve kupce
-</div>
+    <!-- ===================================================== -->
+    <!-- 1. HEAD - MOZGÓ FELSŐ SÁV                             -->
+    <!-- ===================================================== -->
 
-<div class="container">
-
-  <!-- LOGO -->
-  <div class="logo">
-    <img src="https://via.placeholder.com/150x60?text=LANDHOME" alt="Landhome Srbija">
-  </div>
-
-  <!-- BEMUTATKOZÁS -->
-  <h2>Ko smo mi?</h2>
-  <p>
-    Landhome Srbija se bavi prodajom premium kozmetičkih proizvoda za negu kože. Naš cilj je da svako ima zdravu, negovanu i prirodno lepu kožu. Fokusirani smo na kvalitet, sigurnost i vidljive rezultate. Verujemo u jednostavnu i efikasnu negu kože. Svaki proizvod pažljivo je odabran i testiran. Želimo da naši kupci budu zadovoljni i sigurni u ono što koriste.
-  </p>
-
-  <!-- TERMÉKEK -->
-  <h2>Naši proizvodi</h2>
-
-  <h3>Landhome Retinol Krema</h3>
-
-  <img src="https://via.placeholder.com/500x300?text=Proizvod">
-  <img src="https://via.placeholder.com/500x300?text=Pre+Posle">
-
-  <div class="box">✓ Smanjuje bore i fine linije</div>
-  <div class="box">✓ Obnavlja i hidrira kožu</div>
-  <div class="box">✓ Poboljšava elastičnost kože</div>
-
-  <!-- ÖSSZETÉTEL -->
-  <h2>Sastav proizvoda</h2>
-  <div class="box">Retinol</div>
-  <div class="box">Hijaluronska kiselina</div>
-  <div class="box">Vitamin E</div>
-  <div class="box">Prirodni ekstrakti</div>
-
-  <!-- HASZNÁLAT -->
-  <h2>Kako se koristi</h2>
-  <p>
-    Naneti malu količinu kreme uveče na čistu kožu lica. Lagano umasirati dok se potpuno ne upije. Koristiti redovno za najbolje rezultate.
-  </p>
-
-  <!-- ŰRLAP -->
-  <h2>Porudžbina</h2>
-
-  <label>Ime i prezime *</label>
-  <input type="text">
-
-  <label>Ulica i broj *</label>
-  <input type="text">
-
-  <label>Grad *</label>
-  <input type="text">
-
-  <label>Telefon *</label>
-  <input type="text">
-
-  <label>Email (opciono)</label>
-  <input type="text">
-
-  <label>Poruka kuriru</label>
-  <textarea rows="3"></textarea>
-
-  <!-- WHOP GOMB -->
-  <a class="btn" href="https://whop.com/TEEN-TVOJ-LINK" target="_blank">
-    NASTAVI NA PLAĆANJE
-  </a>
-
-  <!-- CÉG ADATOK -->
-  <div class="footer">
-    <p><b>Landhome Srbija</b></p>
-    <p>PIB: XXXXXXXX</p>
-    <p>Matični broj: XXXXXXXX</p>
-    <p>Email: kontakt@landhome.rs</p>
-
-    <div class="social">
-      <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png">
+    <div class="top-bar">
+        <div class="top-bar-content">
+            20% POPUSTA ZA PRVU KUPOVINU • BESPLATNA DOSTAVA IZNAD 5.000 RSD • SIGURNO I BRZO PLAĆANJE KARTICOM •
+        </div>
     </div>
-  </div>
 
-</div>
+
+    <!-- ===================================================== -->
+    <!-- 2. LOGÓ SZEKCIÓ                                      -->
+    <!-- ===================================================== -->
+
+    <div class="logo-section">
+        <img src="images/logo.png" alt="LANTHOME SRBIJA Logo">
+    </div>
+
+
+    <!-- ===================================================== -->
+    <!-- 3. KO SMO MI? - BEMUTATKOZÁS                         -->
+    <!-- ===================================================== -->
+
+    <section class="section">
+
+        <h2>Ko smo mi?</h2>
+
+        <p>
+            LANTHOME SRBIJA se bavi prodajom premium kozmetičkih proizvoda pažljivo odabranih za svakodnevnu negu kože.
+            Naš cilj je da kvalitetna nega bude dostupna svima.
+            Verujemo da samopouzdanje počinje brigom o sebi.
+            Zato nudimo proizvode koje i sami rado koristimo.
+            Zadovoljstvo kupaca nam je najvažnije.
+            Hvala vam na poverenju.
+        </p>
+
+    </section>
 
 </body>
-  </html>
+</html>
