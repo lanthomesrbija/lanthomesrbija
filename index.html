@@ -529,7 +529,7 @@ Redovna upotreba pomaže u obnovi prirodnog izgleda kože.
 </section>
 
 <!-- =========================
-FORM + CTA + GOOGLE SHEET + WHOP
+CHECKOUT FULL SYSTEM
 ========================= -->
 
 <section class="section" style="padding:40px 10px; background:#f2f2f2;">
@@ -538,86 +538,60 @@ FORM + CTA + GOOGLE SHEET + WHOP
 
 <div style="max-width:520px;margin:0 auto;padding:25px;">
 
-    <div style="background:#f2f2f2;border-radius:18px;padding:20px;">
+    <div style="background:#fff;border-radius:18px;padding:20px;">
 
-        <!-- NAME -->
-        <div style="margin-bottom:15px;padding:12px;border-radius:12px;background:#fff;box-shadow:0 10px 20px rgba(0,0,0,0.10);">
-            <label>Ime i prezime <span style="color:red">*</span></label>
-            <input id="name" type="text" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
+        <input id="name" placeholder="Ime i prezime *" style="width:100%;padding:10px;margin-bottom:10px;">
+        <input id="address" placeholder="Adresa *" style="width:100%;padding:10px;margin-bottom:10px;">
+        <input id="city" placeholder="Grad *" style="width:100%;padding:10px;margin-bottom:10px;">
+        <input id="zip" placeholder="Poštanski broj *" style="width:100%;padding:10px;margin-bottom:10px;">
+
+        <div style="display:flex;gap:10px;margin-bottom:10px;">
+            <div style="padding:10px;background:#eee;border-radius:8px;">+381</div>
+            <input id="phone" placeholder="Telefon *" style="flex:1;padding:10px;">
         </div>
 
-        <!-- ADDRESS -->
-        <div style="margin-bottom:15px;padding:12px;border-radius:12px;background:#fff;box-shadow:0 10px 20px rgba(0,0,0,0.10);">
-            <label>Adresa <span style="color:red">*</span></label>
-            <input id="address" type="text" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
-        </div>
-
-        <!-- CITY -->
-        <div style="margin-bottom:15px;padding:12px;border-radius:12px;background:#fff;box-shadow:0 10px 20px rgba(0,0,0,0.10);">
-            <label>Grad <span style="color:red">*</span></label>
-            <input id="city" type="text" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
-        </div>
-
-        <!-- ZIP -->
-        <div style="margin-bottom:15px;padding:12px;border-radius:12px;background:#fff;box-shadow:0 10px 20px rgba(0,0,0,0.10);">
-            <label>Poštanski broj <span style="color:red">*</span></label>
-            <input id="zip" type="text" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
-        </div>
-
-        <!-- PHONE -->
-        <div style="margin-bottom:15px;padding:12px;border-radius:12px;background:#fff;box-shadow:0 10px 20px rgba(0,0,0,0.10);">
-            <label>Telefon <span style="color:red">*</span></label>
-            <div style="display:flex;gap:10px;">
-                <div style="padding:10px;background:#eee;border-radius:8px;">+381</div>
-                <input id="phone" type="tel" required style="flex:1;padding:10px;border-radius:8px;border:1px solid #ccc;">
-            </div>
-        </div>
-
-        <!-- EMAIL -->
-        <div style="margin-bottom:15px;padding:12px;border-radius:12px;background:#fff;box-shadow:0 10px 20px rgba(0,0,0,0.10);">
-            <label>Email</label>
-            <input id="email" type="email" style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
-        </div>
-
-        <!-- NOTE -->
-        <div style="padding:12px;border-radius:12px;background:#fff;box-shadow:0 10px 20px rgba(0,0,0,0.10);">
-            <label>Napomena za kurira</label>
-            <textarea id="note" style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;min-height:80px;"></textarea>
-        </div>
+        <input id="email" placeholder="Email" style="width:100%;padding:10px;margin-bottom:10px;">
+        <textarea id="note" placeholder="Napomena za kurira" style="width:100%;padding:10px;"></textarea>
 
     </div>
 </div>
 </section>
 
-<!-- =========================
-CTA
-========================= -->
-
+<!-- CTA -->
 <section class="section">
 <div style="text-align:center;margin-top:20px;">
 
-    <button id="ctaBtn"
-        style="
-            display:inline-block;
-            padding:16px 28px;
-            font-size:18px;
-            font-weight:bold;
-            border-radius:12px;
-            border:none;
-            cursor:pointer;
-            color:#fff;
-            background:#7ec8ff;
-            box-shadow:0 10px 20px rgba(0,0,0,0.15);
-            opacity:0.5;
-            pointer-events:none;
-            transition:0.3s;
-        ">
-        Idem na plaćanje
-    </button>
+<button id="ctaBtn"
+style="
+padding:16px 28px;
+font-size:18px;
+font-weight:bold;
+border-radius:12px;
+border:none;
+cursor:pointer;
+color:#fff;
+background:#7ec8ff;
+opacity:0.5;
+pointer-events:none;
+transition:0.3s;">
+Idem na plaćanje
+</button>
 
-    <p style="margin-top:10px;">
-        Sigurno plaćanje karticom preko WHOP sistema
-    </p>
+<p style="margin-top:10px;">
+Sigurno plaćanje karticom preko WHOP sistema
+</p>
+
+<!-- EU PAYMENT IMAGE -->
+<div style="margin-top:15px;">
+    <img src="images/EU-Medium-nobg-lightmode.png"
+         alt="Sigurno plaćanje"
+         style="
+            width:180px;
+            max-width:80%;
+            height:auto;
+            opacity:0.9;
+         ">
+</div>
 
 </div>
 </section>
@@ -627,37 +601,35 @@ CTA
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwwsFSK3nXgF9FbWXriMm7VCaOZQWaqcx5u2_BqZvlrkDYi7LQECUlflmLSm6pkLcItkQ/exec";
 const WHOP_URL = "https://whop.com/checkout/plan_0i0xFH21g8h8C";
 
-const fields = ["name","address","city","zip","phone"];
-
+const required = ["name","address","city","zip","phone"];
 const btn = document.getElementById("ctaBtn");
 
 function checkForm() {
-    let valid = true;
+    let ok = true;
 
-    fields.forEach(id => {
-        const el = document.getElementById(id);
-        if (!el.value.trim()) valid = false;
+    required.forEach(id => {
+        if (!document.getElementById(id).value.trim()) ok = false;
     });
 
-    if (valid) {
+    if (ok) {
         btn.style.background = "#2ecc71";
-        btn.style.pointerEvents = "auto";
         btn.style.opacity = "1";
+        btn.style.pointerEvents = "auto";
     } else {
         btn.style.background = "#7ec8ff";
-        btn.style.pointerEvents = "none";
         btn.style.opacity = "0.5";
+        btn.style.pointerEvents = "none";
     }
 }
 
-fields.forEach(id => {
+required.forEach(id => {
     document.getElementById(id).addEventListener("input", checkForm);
 });
 
-btn.addEventListener("click", async function() {
+btn.addEventListener("click", async () => {
 
-    btn.disabled = true;
     btn.innerText = "Slanje...";
+    btn.disabled = true;
 
     const data = {
         name: document.getElementById("name").value,
@@ -672,6 +644,7 @@ btn.addEventListener("click", async function() {
     try {
         const res = await fetch(SCRIPT_URL, {
             method: "POST",
+            headers: {"Content-Type":"application/json"},
             body: JSON.stringify(data)
         });
 
@@ -679,7 +652,7 @@ btn.addEventListener("click", async function() {
 
         window.location.href = WHOP_URL;
 
-    } catch (err) {
+    } catch (e) {
         alert("Greška pri slanju. Pokušaj ponovo.");
         btn.disabled = false;
         btn.innerText = "Idem na plaćanje";
