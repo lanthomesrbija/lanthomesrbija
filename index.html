@@ -529,7 +529,7 @@ Redovna upotreba pomaže u obnovi prirodnog izgleda kože.
 </section>
 
 <!-- =========================
-CHECKOUT FULL SYSTEM
+CHECKOUT FULL SYSTEM (FIXED)
 ========================= -->
 
 <section style="background:#f2f2f2;padding:40px 10px;">
@@ -542,31 +542,31 @@ CHECKOUT FULL SYSTEM
 
 <!-- NAME -->
 <div class="box">
-  <div class="label"><span>👤</span> Ime i prezime <span style="color:red">*</span></div>
+  <div class="label">👤 Ime i prezime <span style="color:red">*</span></div>
   <input name="name" required>
 </div>
 
 <!-- ADDRESS -->
 <div class="box">
-  <div class="label"><span>🏠</span> Ulica i broj <span style="color:red">*</span></div>
+  <div class="label">🏠 Ulica i broj <span style="color:red">*</span></div>
   <input name="address" required>
 </div>
 
 <!-- CITY -->
 <div class="box">
-  <div class="label"><span>🏙️</span> Grad <span style="color:red">*</span></div>
+  <div class="label">🏙️ Grad <span style="color:red">*</span></div>
   <input name="city" required>
 </div>
 
 <!-- ZIP -->
 <div class="box">
-  <div class="label"><span>📍</span> Poštanski broj <span style="color:red">*</span></div>
+  <div class="label">📍 Poštanski broj <span style="color:red">*</span></div>
   <input name="zip" required>
 </div>
 
 <!-- PHONE -->
 <div class="box">
-  <div class="label"><span>📞</span> Telefon <span style="color:red">*</span></div>
+  <div class="label">📞 Telefon <span style="color:red">*</span></div>
 
   <div style="display:flex;gap:10px;">
     <div style="background:#eee;padding:10px;border-radius:8px;font-weight:bold;">
@@ -579,13 +579,13 @@ CHECKOUT FULL SYSTEM
 
 <!-- EMAIL -->
 <div class="box">
-  <div class="label"><span>📧</span> Email</div>
+  <div class="label">📧 Email</div>
   <input name="email">
 </div>
 
 <!-- NOTE -->
 <div class="box">
-  <div class="label"><span>📝</span> Napomena</div>
+  <div class="label">📝 Napomena</div>
   <textarea name="note"></textarea>
 </div>
 
@@ -641,7 +641,6 @@ const WHOP_URL = "https://whop.com/checkout/plan_0i0xFH21g8h8C";
 const form = document.getElementById("orderForm");
 const btn = document.getElementById("ctaBtn");
 
-/* FIX: address is correct again */
 const required = ["name","address","city","zip","phone"];
 
 form.addEventListener("input", () => {
@@ -666,34 +665,27 @@ form.addEventListener("input", () => {
 
 btn.addEventListener("click", async () => {
 
-  console.log(Object.fromEntries(new FormData(form)));
-
   btn.innerText = "Slanje...";
   btn.disabled = true;
 
   const data = {
-  name: form.name.value,
-  address: form.address.value,
-  city: form.city.value,
-  zip: form.zip.value,
-  phone: form.phone.value,
-  email: form.email.value,
-  note: form.note.value
-};
+    name: document.querySelector('[name="name"]').value,
+    address: document.querySelector('[name="address"]').value,
+    city: document.querySelector('[name="city"]').value,
+    zip: document.querySelector('[name="zip"]').value,
+    phone: document.querySelector('[name="phone"]').value,
+    email: document.querySelector('[name="email"]').value,
+    note: document.querySelector('[name="note"]').value
+  };
 
-try {
-  await fetch(SCRIPT_URL, {
-  method: "POST",
-  body: new URLSearchParams({
-    name: form.name.value,
-    address: form.address.value,
-    city: form.city.value,
-    zip: form.zip.value,
-    phone: form.phone.value,
-    email: form.email.value,
-    note: form.note.value
-  })
-});
+  try {
+    await fetch(SCRIPT_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
 
     window.location.href = WHOP_URL;
 
