@@ -365,21 +365,21 @@ Redovna upotreba pomaže u obnovi prirodnog izgleda kože.
 8. FORM
 ========================= -->
 
-<section class="section" style="padding:40px 10px;">
+<section class="section" style="padding:40px 10px; background:#f2f2f2;">
 
 <h2 style="text-align:center;">Podaci kupca</h2>
 
 <div style="max-width:520px;margin:0 auto;padding:25px;">
 
+    <!-- MAIN CARD -->
     <div style="
-        background:#fff;
+        background:#f2f2f2;
         border-radius:18px;
         padding:20px;
-        box-shadow:0 15px 35px rgba(0,0,0,0.18);
     ">
 
         <!-- FIELD 1 -->
-        <div style="margin-bottom:15px;padding:12px;border-radius:12px;background:#f9f9f9;box-shadow:0 6px 15px rgba(0,0,0,0.08);">
+        <div style="margin-bottom:15px;padding:12px;border-radius:12px;background:#fff;box-shadow:0 10px 20px rgba(0,0,0,0.10);">
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
                 <div style="width:28px;height:28px;background:#eee;display:flex;align-items:center;justify-content:center;border-radius:6px;">👤</div>
                 <label>Ime i prezime <span style="color:red">*</span></label>
@@ -388,7 +388,7 @@ Redovna upotreba pomaže u obnovi prirodnog izgleda kože.
         </div>
 
         <!-- FIELD 2 -->
-        <div style="margin-bottom:15px;padding:12px;border-radius:12px;background:#f9f9f9;box-shadow:0 6px 15px rgba(0,0,0,0.08);">
+        <div style="margin-bottom:15px;padding:12px;border-radius:12px;background:#fff;box-shadow:0 10px 20px rgba(0,0,0,0.10);">
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
                 <div style="width:28px;height:28px;background:#eee;display:flex;align-items:center;justify-content:center;border-radius:6px;">🏠</div>
                 <label>Adresa <span style="color:red">*</span></label>
@@ -397,7 +397,7 @@ Redovna upotreba pomaže u obnovi prirodnog izgleda kože.
         </div>
 
         <!-- FIELD 3 -->
-        <div style="margin-bottom:15px;padding:12px;border-radius:12px;background:#f9f9f9;box-shadow:0 6px 15px rgba(0,0,0,0.08);">
+        <div style="margin-bottom:15px;padding:12px;border-radius:12px;background:#fff;box-shadow:0 10px 20px rgba(0,0,0,0.10);">
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
                 <div style="width:28px;height:28px;background:#eee;display:flex;align-items:center;justify-content:center;border-radius:6px;">🏙️</div>
                 <label>Grad <span style="color:red">*</span></label>
@@ -405,17 +405,44 @@ Redovna upotreba pomaže u obnovi prirodnog izgleda kože.
             <input type="text" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
         </div>
 
-        <!-- FIELD 4 -->
-        <div style="margin-bottom:15px;padding:12px;border-radius:12px;background:#f9f9f9;box-shadow:0 6px 15px rgba(0,0,0,0.08);">
+        <!-- FIELD 4 (IRÁNYÍTÓ SZÁM) -->
+        <div style="margin-bottom:15px;padding:12px;border-radius:12px;background:#fff;box-shadow:0 10px 20px rgba(0,0,0,0.10);">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
+                <div style="width:28px;height:28px;background:#eee;display:flex;align-items:center;justify-content:center;border-radius:6px;">📍</div>
+                <label>Poštanski broj <span style="color:red">*</span></label>
+            </div>
+            <input type="text" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
+        </div>
+
+        <!-- FIELD 5 (PHONE + COUNTRY CODE) -->
+        <div style="margin-bottom:15px;padding:12px;border-radius:12px;background:#fff;box-shadow:0 10px 20px rgba(0,0,0,0.10);">
+
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
                 <div style="width:28px;height:28px;background:#eee;display:flex;align-items:center;justify-content:center;border-radius:6px;">📞</div>
                 <label>Telefon <span style="color:red">*</span></label>
             </div>
-            <input type="tel" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
+
+            <!-- +381 BLOCK -->
+            <div style="display:flex;gap:10px;align-items:center;">
+
+                <div style="
+                    padding:10px 12px;
+                    background:#f0f0f0;
+                    border-radius:8px;
+                    font-weight:bold;
+                    box-shadow:inset 0 2px 5px rgba(0,0,0,0.1);
+                ">
+                    +381
+                </div>
+
+                <input type="tel" required
+                    style="flex:1;padding:10px;border-radius:8px;border:1px solid #ccc;">
+            </div>
+
         </div>
 
-        <!-- FIELD 5 -->
-        <div style="margin-bottom:15px;padding:12px;border-radius:12px;background:#f9f9f9;box-shadow:0 6px 15px rgba(0,0,0,0.08);">
+        <!-- FIELD 6 -->
+        <div style="margin-bottom:15px;padding:12px;border-radius:12px;background:#fff;box-shadow:0 10px 20px rgba(0,0,0,0.10);">
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
                 <div style="width:28px;height:28px;background:#eee;display:flex;align-items:center;justify-content:center;border-radius:6px;">📧</div>
                 <label>Email (opciono)</label>
@@ -423,8 +450,8 @@ Redovna upotreba pomaže u obnovi prirodnog izgleda kože.
             <input type="email" style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
         </div>
 
-        <!-- FIELD 6 -->
-        <div style="padding:12px;border-radius:12px;background:#f9f9f9;box-shadow:0 6px 15px rgba(0,0,0,0.08);">
+        <!-- FIELD 7 -->
+        <div style="padding:12px;border-radius:12px;background:#fff;box-shadow:0 10px 20px rgba(0,0,0,0.10);">
             <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
                 <div style="width:28px;height:28px;background:#eee;display:flex;align-items:center;justify-content:center;border-radius:6px;">📝</div>
                 <label>Napomena za kurira</label>
