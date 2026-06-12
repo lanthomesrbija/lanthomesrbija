@@ -529,7 +529,7 @@ Redovna upotreba pomaže u obnovi prirodnog izgleda kože.
 </section>
 
 <!-- =========================
-CHECKOUT FULL SYSTEM (FIXED)
+CHECKOUT FULL SYSTEM (FIXED FINAL)
 ========================= -->
 
 <section style="background:#f2f2f2;padding:40px 10px;">
@@ -599,7 +599,7 @@ CHECKOUT FULL SYSTEM (FIXED)
 
 <button id="ctaBtn"
 style="padding:16px 28px;font-size:18px;font-weight:bold;border:none;border-radius:12px;
-background:#7ec8ff;color:#fff;opacity:.5;pointer-events:none;">
+background:#7ec8ff;color:#fff;opacity:.5;">
 Idem na plaćanje
 </button>
 
@@ -643,25 +643,34 @@ const btn = document.getElementById("ctaBtn");
 
 const required = ["name","address","city","zip","phone"];
 
-form.addEventListener("input", () => {
+// 🔥 FIX: initial state
+btn.disabled = true;
+btn.style.pointerEvents = "none";
 
-  let ok = true;
+function checkForm() {
 
-  required.forEach(n => {
-    const el = form.querySelector(`[name="${n}"]`);
-    if (!el || !el.value.trim()) ok = false;
-  });
+  const name = document.querySelector('[name="name"]').value.trim();
+  const address = document.querySelector('[name="address"]').value.trim();
+  const city = document.querySelector('[name="city"]').value.trim();
+  const zip = document.querySelector('[name="zip"]').value.trim();
+  const phone = document.querySelector('[name="phone"]').value.trim();
+
+  const ok = name && address && city && zip && phone;
 
   if (ok) {
     btn.style.background = "#2ecc71";
     btn.style.opacity = "1";
+    btn.disabled = false;
     btn.style.pointerEvents = "auto";
   } else {
     btn.style.background = "#7ec8ff";
     btn.style.opacity = ".5";
+    btn.disabled = true;
     btn.style.pointerEvents = "none";
   }
-});
+}
+
+form.addEventListener("input", checkForm);
 
 btn.addEventListener("click", async () => {
 
@@ -669,13 +678,13 @@ btn.addEventListener("click", async () => {
   btn.disabled = true;
 
   const data = {
-    name: document.querySelector('[name="name"]').value,
-    address: document.querySelector('[name="address"]').value,
-    city: document.querySelector('[name="city"]').value,
-    zip: document.querySelector('[name="zip"]').value,
-    phone: document.querySelector('[name="phone"]').value,
-    email: document.querySelector('[name="email"]').value,
-    note: document.querySelector('[name="note"]').value
+    name: document.querySelector('[name="name"]').value.trim(),
+    address: document.querySelector('[name="address"]').value.trim(),
+    city: document.querySelector('[name="city"]').value.trim(),
+    zip: document.querySelector('[name="zip"]').value.trim(),
+    phone: document.querySelector('[name="phone"]').value.trim(),
+    email: document.querySelector('[name="email"]').value.trim(),
+    note: document.querySelector('[name="note"]').value.trim()
   };
 
   try {
@@ -693,6 +702,7 @@ btn.addEventListener("click", async () => {
     alert("Greška pri slanju");
     btn.disabled = false;
     btn.innerText = "Idem na plaćanje";
+    checkForm();
   }
 });
 
