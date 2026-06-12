@@ -666,6 +666,8 @@ form.addEventListener("input", () => {
 
 btn.addEventListener("click", async () => {
 
+  console.log(Object.fromEntries(new FormData(form)));
+
   btn.innerText = "Slanje...";
   btn.disabled = true;
 
