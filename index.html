@@ -681,9 +681,17 @@ btn.addEventListener("click", async () => {
 
 try {
   await fetch(SCRIPT_URL, {
-    method: "POST",
-    body: JSON.stringify(data)
-  });
+  method: "POST",
+  body: new URLSearchParams({
+    name: form.name.value,
+    address: form.address.value,
+    city: form.city.value,
+    zip: form.zip.value,
+    phone: form.phone.value,
+    email: form.email.value,
+    note: form.note.value
+  })
+});
 
     window.location.href = WHOP_URL;
 
