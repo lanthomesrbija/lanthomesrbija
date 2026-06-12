@@ -354,18 +354,61 @@ function toggleSastojci() {
 8. FORM
 ========================= -->
 
-<section class="section">
+<section class="section" style="padding:40px 10px;">
 
-<h2>Podaci kupca</h2>
+<h2 style="text-align:center;">Podaci kupca</h2>
 
-<div class="form-box">
+<div style="
+    max-width:500px;
+    margin:0 auto;
+    padding:25px;
+    background:#ffffff;
+    border-radius:16px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.15);
+    transform:translateY(0);
+    transition:0.3s;
+">
 
-<input type="text" placeholder="Ime i prezime *" required>
-<input type="text" placeholder="Adresa *" required>
-<input type="text" placeholder="Grad *" required>
-<input type="tel" placeholder="Telefon *" required>
-<input type="email" placeholder="Email (opciono)">
-<textarea placeholder="Napomena za kurira"></textarea>
+    <!-- INPUTS -->
+    <div style="display:flex; flex-direction:column; gap:12px;">
+
+        <div>
+            <label>👤 Ime i prezime <span style="color:red">*</span></label>
+            <input type="text" required
+                style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
+        </div>
+
+        <div>
+            <label>🏠 Adresa <span style="color:red">*</span></label>
+            <input type="text" required
+                style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
+        </div>
+
+        <div>
+            <label>🏙️ Grad <span style="color:red">*</span></label>
+            <input type="text" required
+                style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
+        </div>
+
+        <div>
+            <label>📞 Telefon <span style="color:red">*</span></label>
+            <input type="tel" required
+                style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
+        </div>
+
+        <div>
+            <label>📧 Email (opciono)</label>
+            <input type="email"
+                style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
+        </div>
+
+        <div>
+            <label>📝 Napomena za kurira</label>
+            <textarea
+                style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;min-height:80px;"></textarea>
+        </div>
+
+    </div>
 
 </div>
 
