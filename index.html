@@ -249,13 +249,53 @@ Lepota počinje brigom o sebi – i mi smo tu da ti u tome pomognemo 💫.
 5. SASTOJCI
 ========================= -->
 
-<section class="section" style="background:#fafafa;">
+<section class="section" style="background:#fafafa; padding:20px;">
 
 <h2>Sastojci</h2>
 
-<p>
-Retinol • Hijaluronska kiselina • Vitamin E • Kolagen • Prirodni hidratantni kompleks
-</p>
+<!-- TOGGLE BUTTON -->
+<button onclick="toggleSastojci()"
+    style="background:#7a5a3a; color:white; padding:12px 18px; border:none; border-radius:8px; cursor:pointer; font-weight:bold;">
+    Pogledaj pažljivo odabrane sastojke
+</button>
+
+<!-- HIDDEN CONTENT -->
+<div id="sastojciBox" style="display:none; margin-top:20px; text-align:left; max-width:600px; margin-left:auto; margin-right:auto;">
+
+    <p>• Voda</p>
+    <p>• Cetil-heksanoat</p>
+    <p>• Glicerin</p>
+    <p>• Propilen glikol</p>
+    <p>• Kaprilni trigliceridi</p>
+    <p>• Cetearyl alkohol</p>
+    <p>• Ciklopentasiloksan</p>
+    <p>• Cetearyl glukozid</p>
+    <p>• C20-22 alkil fosfat</p>
+    <p>• C20-22 alkoholi</p>
+    <p>• Dimetikon</p>
+    <p>• Karbomer</p>
+    <p>• Alantoin</p>
+    <p>• Retinil palmitat (vitamin A derivat)</p>
+    <p>• Tokoferol (vitamin E)</p>
+    <p>• Diazolidinil urea</p>
+    <p>• Jodopropinil butilkarbamat</p>
+    <p>• Metilparaben</p>
+    <p>• Propilparaben</p>
+    <p>• Aroma (mirisna komponenta)</p>
+
+</div>
+
+<!-- SIMPLE TOGGLE SCRIPT -->
+<script>
+function toggleSastojci() {
+    var box = document.getElementById("sastojciBox");
+    if (box.style.display === "none") {
+        box.style.display = "block";
+    } else {
+        box.style.display = "none";
+    }
+}
+</script>
 
 </section>
 
