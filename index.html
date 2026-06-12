@@ -599,7 +599,7 @@ CHECKOUT FULL SYSTEM (FINAL FIX)
 
 <button id="ctaBtn" type="button"
 style="padding:16px 28px;font-size:18px;font-weight:bold;border:none;border-radius:12px;
-background:#7ec8ff;color:#fff;opacity:.5;">
+background:#7ec8ff;color:#fff;opacity:.5;pointer-events:none;">
 Idem na plaćanje
 </button>
 
@@ -640,7 +640,6 @@ const WHOP_URL = "https://whop.com/checkout/plan_0i0xFH21g8h8C";
 
 const form = document.getElementById("orderForm");
 const btn = document.getElementById("ctaBtn");
-    btn.disabled = true;
 
 console.log("SCRIPT LOADED");
 
@@ -694,9 +693,9 @@ btn.addEventListener("click", async () => {
 
   try {
     await fetch(SCRIPT_URL, {
-  method: "POST",
-  body: JSON.stringify(data)
-});
+      method: "POST",
+      body: JSON.stringify(data)
+    });
 
     window.location.href = WHOP_URL;
 
@@ -710,9 +709,12 @@ btn.addEventListener("click", async () => {
   }
 });
 
+// ✅ FONTOS: mindig a script VÉGÉN
 window.addEventListener("load", () => {
   checkForm();
 });
+
+</script>
 <!-- =========================
 10. COMPANY
 ========================= -->
