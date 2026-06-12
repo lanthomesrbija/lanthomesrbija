@@ -546,10 +546,10 @@ CHECKOUT FULL SYSTEM
   <input name="name" required>
 </div>
 
-<!-- ADDRESS -->
+<!-- ADDRESS (FIXED BACK TO address) -->
 <div class="box">
   <div class="label"><span>🏠</span> Ulica i broj <span style="color:red">*</span></div>
-  <input name="street" required placeholder="npr. Glavna 12">
+  <input name="address" required placeholder="npr. Glavna 12">
 </div>
 
 <!-- CITY -->
@@ -569,12 +569,7 @@ CHECKOUT FULL SYSTEM
   <div class="label"><span>📞</span> Telefon <span style="color:red">*</span></div>
 
   <div style="display:flex;gap:10px;">
-    <div style="
-        background:#eee;
-        padding:10px;
-        border-radius:8px;
-        font-weight:bold;
-    ">
+    <div style="background:#eee;padding:10px;border-radius:8px;font-weight:bold;">
       +381
     </div>
 
@@ -646,6 +641,7 @@ const WHOP_URL = "https://whop.com/checkout/plan_0i0xFH21g8h8C";
 const form = document.getElementById("orderForm");
 const btn = document.getElementById("ctaBtn");
 
+/* FIX: address is correct again */
 const required = ["name","address","city","zip","phone"];
 
 form.addEventListener("input", () => {
@@ -653,7 +649,8 @@ form.addEventListener("input", () => {
   let ok = true;
 
   required.forEach(n => {
-    if (!form[n].value.trim()) ok = false;
+    const el = form.querySelector(`[name="${n}"]`);
+    if (!el || !el.value.trim()) ok = false;
   });
 
   if (ok) {
