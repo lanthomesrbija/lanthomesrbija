@@ -537,6 +537,262 @@ Facebook • TikTok • Instagram
 </p>
 
 </section>
+    <!-- =========================
+FOOTER
+========================= -->
+
+<section class="lanthome-footer">
+
+  <div class="footer-container">
+
+    <!-- BRAND -->
+    <div class="footer-column">
+      <h3 class="footer-title">LanthomeSrbija</h3>
+
+      <p class="footer-text">
+        Kvalitetna i bezbedna kozmetika za svakodnevnu negu kože.
+      </p>
+
+      <p class="footer-highlight">
+        ✔ 30 dana povraćaj novca<br>
+        ✔ Plaćanje pouzećem
+      </p>
+    </div>
+
+    <!-- INFO -->
+    <div class="footer-column">
+      <h4 class="footer-subtitle">Informacije</h4>
+      <ul class="footer-links">
+        <li><a href="https://www.lanthomesrbija.com/policies/contact-information">Kontakt</a></li>
+        <li><a href="https://www.lanthomesrbija.com/policies/terms-of-service">Uslovi korišćenja</a></li>
+        <li><a href="https://www.lanthomesrbija.com/policies/privacy-policy">Politika privatnosti</a></li>
+      </ul>
+    </div>
+
+    <!-- COMPANY -->
+    <div class="footer-column">
+      <h4 class="footer-subtitle">Podaci o firmi</h4>
+
+      <p class="footer-text">
+        ČILLI SHOP PR.<br><br>
+        Matični broj:<br> <strong>68208190</strong><br>
+        PIB:<br> <strong>115239530</strong>
+      </p>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-column">
+      <h4 class="footer-subtitle">Kontakt</h4>
+
+      <!-- WhatsApp -->
+      <div class="contact-row">
+        <img src="https://cdn.shopify.com/s/files/1/0961/6274/2555/files/WhatsApp_Green_Square.jpg?v=1767131345"
+             alt="WhatsApp"
+             class="contact-icon"/>
+        <a href="https://wa.me/381637119443" target="_blank" class="contact-link">
+          WhatsApp: +381 63 711 9443
+        </a>
+      </div>
+
+      <!-- Viber -->
+      <div class="contact-row">
+        <img src="https://cdn.shopify.com/s/files/1/0961/6274/2555/files/Viber_Icon_9e2b864a-7699-4e95-8ea6-519a698c39d9.jpg?v=1767131481"
+             alt="Viber"
+             class="contact-icon"/>
+        <a href="viber://chat?number=+381637119443" class="contact-link">
+          Viber: +381 63 711 9443
+        </a>
+      </div>
+
+      <p class="footer-text">
+        📩 <a href="mailto:info@lanthomesrbija.com" class="contact-link">
+          info@lanthomesrbija.com
+        </a>
+      </p>
+
+      <p class="footer-text">
+        ⏰ <strong>Radno vreme:</strong><br>
+        Svaki dan: <strong>16:00 – 21:00</strong>
+      </p>
+
+      <p class="footer-small">Srbija</p>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+
+    <div class="footer-logo">
+      <img src="images/Lanthome_20260611_111017_0000 (1).png" alt="LanthomeSrbija logo">
+    </div>
+
+    <div class="footer-facebook">
+      <a href="https://www.facebook.com/profile.php?id=61584473474109"
+         target="_blank">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2.3V12h2.3V9.8c0-2.3 1.4-3.6 3.5-3.6 1 0 2 .2 2 .2v2.2h-1.1c-1.1 0-1.5.7-1.5 1.4V12h2.6l-.4 2.9h-2.2v7A10 10 0 0 0 22 12z"/>
+        </svg>
+        <span>Facebook</span>
+      </a>
+    </div>
+
+    <p class="footer-copy">
+      © {{ 'now' | date: '%Y' }} LanthomeSrbija. Sva prava zadržana.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- =========================
+STYLES
+========================= -->
+
+<style>
+:root {
+  --brand-bg: #f2f2f2;
+  --contact-blue: #0056B3;
+  --contact-hover: #2ecc71;
+}
+
+.lanthome-footer {
+  background: var(--brand-bg);
+  color: #1a1a1a;
+  padding: 50px 20px 30px;
+  font-size: 14px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer-title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.footer-subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.footer-text {
+  line-height: 1.6;
+}
+
+.footer-highlight {
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  color: var(--contact-hover);
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.contact-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.contact-link {
+  color: var(--contact-blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  color: var(--contact-hover);
+}
+
+.footer-small {
+  font-size: 12px;
+  color: #333;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(0,0,0,0.2);
+  margin-top: 40px;
+  padding-top: 25px;
+  text-align: center;
+}
+
+.footer-logo img {
+  max-width: 140px;
+  margin-bottom: 15px;
+}
+
+.footer-facebook a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--contact-blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-facebook a:hover {
+  color: var(--contact-hover);
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: #333;
+}
+</style>
+
+<!-- =========================
+CENTER IMAGE
+========================= -->
+
+<div class="center-image-wrapper">
+  <img src="https://cdn.shopify.com/s/files/1/0961/6274/2555/files/Nevtelenterv_2.png?v=1761776533"
+       alt="Középső kép"
+       class="center-image">
+</div>
+
+<style>
+.center-image-wrapper {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  padding:0;
+}
+
+.center-image {
+  width:300px;
+  max-width:90%;
+  height:auto;
+}
+</style>
 
 </body>
 </html>
