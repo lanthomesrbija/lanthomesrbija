@@ -494,31 +494,21 @@ Redovna upotreba pomaže u obnovi prirodnog izgleda kože.
         Sigurno plaćanje karticom preko WHOP sistema
     </p>
 
+    <!-- TRUST IMAGE -->
+    <div style="margin-top:15px;">
+        <img src="images/EU-Medium-nobg-lightmode.png"
+             alt="EU Secure Payment"
+             style="
+                width:180px;
+                max-width:80%;
+                height:auto;
+                opacity:0.9;
+             ">
+    </div>
+
 </div>
 
 </section>
-
-<script>
-const requiredInputs = document.querySelectorAll('input[required], textarea[required]');
-const ctaBtn = document.getElementById("ctaBtn");
-
-function checkForm() {
-    const allFilled = [...requiredInputs].every(el => el.value.trim() !== "");
-
-    if (allFilled) {
-        ctaBtn.style.background = "#2ecc71";
-        ctaBtn.style.opacity = "1";
-        ctaBtn.style.pointerEvents = "auto";
-    } else {
-        ctaBtn.style.background = "#7ec8ff";
-        ctaBtn.style.opacity = "0.5";
-        ctaBtn.style.pointerEvents = "none";
-    }
-}
-
-requiredInputs.forEach(el => el.addEventListener("input", checkForm));
-checkForm();
-</script>
 <!-- =========================
 10. COMPANY
 ========================= -->
