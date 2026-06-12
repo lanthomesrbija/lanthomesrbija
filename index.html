@@ -529,7 +529,7 @@ Redovna upotreba pomaže u obnovi prirodnog izgleda kože.
 </section>
 
 <!-- =========================
-8. FORM
+FORM + CTA + GOOGLE SHEET + WHOP
 ========================= -->
 
 <section class="section" style="padding:40px 10px; background:#f2f2f2;">
@@ -538,92 +538,51 @@ Redovna upotreba pomaže u obnovi prirodnog izgleda kože.
 
 <div style="max-width:520px;margin:0 auto;padding:25px;">
 
-    <!-- MAIN CARD -->
-    <div style="
-        background:#f2f2f2;
-        border-radius:18px;
-        padding:20px;
-    ">
+    <div style="background:#f2f2f2;border-radius:18px;padding:20px;">
 
-        <!-- FIELD 1 -->
+        <!-- NAME -->
         <div style="margin-bottom:15px;padding:12px;border-radius:12px;background:#fff;box-shadow:0 10px 20px rgba(0,0,0,0.10);">
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
-                <div style="width:28px;height:28px;background:#eee;display:flex;align-items:center;justify-content:center;border-radius:6px;">👤</div>
-                <label>Ime i prezime <span style="color:red">*</span></label>
-            </div>
-            <input type="text" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
+            <label>Ime i prezime <span style="color:red">*</span></label>
+            <input id="name" type="text" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
         </div>
 
-        <!-- FIELD 2 -->
+        <!-- ADDRESS -->
         <div style="margin-bottom:15px;padding:12px;border-radius:12px;background:#fff;box-shadow:0 10px 20px rgba(0,0,0,0.10);">
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
-                <div style="width:28px;height:28px;background:#eee;display:flex;align-items:center;justify-content:center;border-radius:6px;">🏠</div>
-                <label>Adresa <span style="color:red">*</span></label>
-            </div>
-            <input type="text" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
+            <label>Adresa <span style="color:red">*</span></label>
+            <input id="address" type="text" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
         </div>
 
-        <!-- FIELD 3 -->
+        <!-- CITY -->
         <div style="margin-bottom:15px;padding:12px;border-radius:12px;background:#fff;box-shadow:0 10px 20px rgba(0,0,0,0.10);">
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
-                <div style="width:28px;height:28px;background:#eee;display:flex;align-items:center;justify-content:center;border-radius:6px;">🏙️</div>
-                <label>Grad <span style="color:red">*</span></label>
-            </div>
-            <input type="text" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
+            <label>Grad <span style="color:red">*</span></label>
+            <input id="city" type="text" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
         </div>
 
-        <!-- FIELD 4 (IRÁNYÍTÓ SZÁM) -->
+        <!-- ZIP -->
         <div style="margin-bottom:15px;padding:12px;border-radius:12px;background:#fff;box-shadow:0 10px 20px rgba(0,0,0,0.10);">
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
-                <div style="width:28px;height:28px;background:#eee;display:flex;align-items:center;justify-content:center;border-radius:6px;">📍</div>
-                <label>Poštanski broj <span style="color:red">*</span></label>
-            </div>
-            <input type="text" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
+            <label>Poštanski broj <span style="color:red">*</span></label>
+            <input id="zip" type="text" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
         </div>
 
-        <!-- FIELD 5 (PHONE + COUNTRY CODE) -->
+        <!-- PHONE -->
         <div style="margin-bottom:15px;padding:12px;border-radius:12px;background:#fff;box-shadow:0 10px 20px rgba(0,0,0,0.10);">
-
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
-                <div style="width:28px;height:28px;background:#eee;display:flex;align-items:center;justify-content:center;border-radius:6px;">📞</div>
-                <label>Telefon <span style="color:red">*</span></label>
+            <label>Telefon <span style="color:red">*</span></label>
+            <div style="display:flex;gap:10px;">
+                <div style="padding:10px;background:#eee;border-radius:8px;">+381</div>
+                <input id="phone" type="tel" required style="flex:1;padding:10px;border-radius:8px;border:1px solid #ccc;">
             </div>
-
-            <!-- +381 BLOCK -->
-            <div style="display:flex;gap:10px;align-items:center;">
-
-                <div style="
-                    padding:10px 12px;
-                    background:#f0f0f0;
-                    border-radius:8px;
-                    font-weight:bold;
-                    box-shadow:inset 0 2px 5px rgba(0,0,0,0.1);
-                ">
-                    +381
-                </div>
-
-                <input type="tel" required
-                    style="flex:1;padding:10px;border-radius:8px;border:1px solid #ccc;">
-            </div>
-
         </div>
 
-        <!-- FIELD 6 -->
+        <!-- EMAIL -->
         <div style="margin-bottom:15px;padding:12px;border-radius:12px;background:#fff;box-shadow:0 10px 20px rgba(0,0,0,0.10);">
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
-                <div style="width:28px;height:28px;background:#eee;display:flex;align-items:center;justify-content:center;border-radius:6px;">📧</div>
-                <label>Email (opciono)</label>
-            </div>
-            <input type="email" style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
+            <label>Email</label>
+            <input id="email" type="email" style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;">
         </div>
 
-        <!-- FIELD 7 -->
+        <!-- NOTE -->
         <div style="padding:12px;border-radius:12px;background:#fff;box-shadow:0 10px 20px rgba(0,0,0,0.10);">
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
-                <div style="width:28px;height:28px;background:#eee;display:flex;align-items:center;justify-content:center;border-radius:6px;">📝</div>
-                <label>Napomena za kurira</label>
-            </div>
-            <textarea style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;min-height:80px;"></textarea>
+            <label>Napomena za kurira</label>
+            <textarea id="note" style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;min-height:80px;"></textarea>
         </div>
 
     </div>
@@ -631,51 +590,103 @@ Redovna upotreba pomaže u obnovi prirodnog izgleda kože.
 </section>
 
 <!-- =========================
-9. CTA
+CTA
 ========================= -->
 
 <section class="section">
-
 <div style="text-align:center;margin-top:20px;">
 
-    <a id="ctaBtn"
-       href="https://whop.com/checkout/plan_0i0xFH21g8h8C"
-       style="
+    <button id="ctaBtn"
+        style="
             display:inline-block;
             padding:16px 28px;
             font-size:18px;
             font-weight:bold;
             border-radius:12px;
-            text-decoration:none;
+            border:none;
+            cursor:pointer;
             color:#fff;
             background:#7ec8ff;
             box-shadow:0 10px 20px rgba(0,0,0,0.15);
             opacity:0.5;
             pointer-events:none;
             transition:0.3s;
-       ">
+        ">
         Idem na plaćanje
-    </a>
+    </button>
 
-    <p class="small" style="margin-top:10px;">
+    <p style="margin-top:10px;">
         Sigurno plaćanje karticom preko WHOP sistema
     </p>
 
-    <!-- TRUST IMAGE -->
-    <div style="margin-top:15px;">
-        <img src="images/EU-Medium-nobg-lightmode.png"
-             alt="EU Secure Payment"
-             style="
-                width:180px;
-                max-width:80%;
-                height:auto;
-                opacity:0.9;
-             ">
-    </div>
-
 </div>
-
 </section>
+
+<script>
+
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwwsFSK3nXgF9FbWXriMm7VCaOZQWaqcx5u2_BqZvlrkDYi7LQECUlflmLSm6pkLcItkQ/exec";
+const WHOP_URL = "https://whop.com/checkout/plan_0i0xFH21g8h8C";
+
+const fields = ["name","address","city","zip","phone"];
+
+const btn = document.getElementById("ctaBtn");
+
+function checkForm() {
+    let valid = true;
+
+    fields.forEach(id => {
+        const el = document.getElementById(id);
+        if (!el.value.trim()) valid = false;
+    });
+
+    if (valid) {
+        btn.style.background = "#2ecc71";
+        btn.style.pointerEvents = "auto";
+        btn.style.opacity = "1";
+    } else {
+        btn.style.background = "#7ec8ff";
+        btn.style.pointerEvents = "none";
+        btn.style.opacity = "0.5";
+    }
+}
+
+fields.forEach(id => {
+    document.getElementById(id).addEventListener("input", checkForm);
+});
+
+btn.addEventListener("click", async function() {
+
+    btn.disabled = true;
+    btn.innerText = "Slanje...";
+
+    const data = {
+        name: document.getElementById("name").value,
+        address: document.getElementById("address").value,
+        city: document.getElementById("city").value,
+        zip: document.getElementById("zip").value,
+        phone: "+381 " + document.getElementById("phone").value,
+        email: document.getElementById("email").value,
+        note: document.getElementById("note").value
+    };
+
+    try {
+        const res = await fetch(SCRIPT_URL, {
+            method: "POST",
+            body: JSON.stringify(data)
+        });
+
+        await res.text();
+
+        window.location.href = WHOP_URL;
+
+    } catch (err) {
+        alert("Greška pri slanju. Pokušaj ponovo.");
+        btn.disabled = false;
+        btn.innerText = "Idem na plaćanje";
+    }
+});
+
+</script>
 <!-- =========================
 10. COMPANY
 ========================= -->
