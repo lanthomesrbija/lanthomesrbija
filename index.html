@@ -669,14 +669,23 @@ btn.addEventListener("click", async () => {
   btn.innerText = "Slanje...";
   btn.disabled = true;
 
-  const fd = new FormData(form);
+  const data = {
+  name: form.name.value,
+  address: form.address.value,
+  city: form.city.value,
+  zip: form.zip.value,
+  phone: form.phone.value,
+  email: form.email.value,
+  note: form.note.value
+};
 
-  try {
-    await fetch(SCRIPT_URL, {
-      method: "POST",
-      body: fd
-    });
-
+await fetch(SCRIPT_URL, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(data)
+});
     window.location.href = WHOP_URL;
 
   } catch (e) {
