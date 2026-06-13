@@ -163,17 +163,107 @@ SMALL TEXT
 3. ABOUT
 ========================= -->
 
-<section class="section">
+```html
+<!-- =========================
+KO SMO MI?
+========================= -->
 
-<h2>Ko smo mi?</h2>
+<section class="section about-section">
 
-<p>
-LANTHOME SRBIJA je brend koji se bavi premium kozmetikom ✨. Naš cilj je da svako ima zdravu, negovanu i blistavu kožu 💆‍♀️💖. Verujemo da nega kože ne mora biti komplikovana – zato koristimo jednostavne, ali efikasne formule koje daju stvarne rezultate 🌿.
-Naši proizvodi su napravljeni da podrže prirodnu lepotu kože i pomognu u borbi protiv bora, umora i suvoće kože 🌸. Svaki dan radimo na tome da kupcima pružimo osećaj sigurnosti, kvaliteta i zadovoljstva 😊.
-Lepota počinje brigom o sebi – i mi smo tu da ti u tome pomognemo 💫.
-</p>
+    <div class="title-box">
+        <h2>Ko smo mi?</h2>
+    </div>
+
+    <div class="about-content">
+        <p>
+            LANTHOME SRBIJA je brend koji se bavi premium kozmetikom ✨.
+            Naš cilj je da svako ima zdravu, negovanu i blistavu kožu 💆‍♀️💖.
+            Verujemo da nega kože ne mora biti komplikovana – zato koristimo
+            jednostavne, ali efikasne formule koje daju stvarne rezultate 🌿.
+        </p>
+
+        <p>
+            Naši proizvodi su napravljeni da podrže prirodnu lepotu kože i
+            pomognu u borbi protiv bora, umora i suvoće kože 🌸.
+            Svaki dan radimo na tome da kupcima pružimo osećaj sigurnosti,
+            kvaliteta i zadovoljstva 😊.
+        </p>
+
+        <p>
+            Lepota počinje brigom o sebi – i mi smo tu da ti u tome pomognemo 💫.
+        </p>
+    </div>
 
 </section>
+
+<style>
+.about-section{
+    padding:40px 20px;
+    background:#f8f8f8;
+}
+
+/* 3D cím */
+.title-box{
+    max-width:600px;
+    margin:0 auto 30px;
+    background:#ffffff;
+    padding:18px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.10),
+        0 3px 8px rgba(0,0,0,0.06);
+}
+
+.title-box h2{
+    margin:0;
+    font-size:30px;
+    color:#333;
+    font-weight:700;
+}
+
+/* Szövegdoboz margókkal */
+.about-content{
+    max-width:700px;
+    margin:0 auto;
+    background:#ffffff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.08);
+}
+
+.about-content p{
+    margin:0 0 18px;
+    line-height:1.9;
+    color:#555;
+    font-size:16px;
+    text-align:justify;
+}
+
+.about-content p:last-child{
+    margin-bottom:0;
+}
+
+/* Mobil */
+@media (max-width:600px){
+
+    .title-box h2{
+        font-size:26px;
+    }
+
+    .about-content{
+        padding:22px;
+    }
+
+    .about-content p{
+        font-size:15px;
+        line-height:1.8;
+    }
+}
+</style>
+```
+
 
 
 <!-- =========================
