@@ -293,7 +293,6 @@ RESPONSIVE HERO IMAGE
     background:#f5f5f5;
     display:flex;
     justify-content:center;
-    align-items:center;
 }
 
 .hero-container{
@@ -301,16 +300,16 @@ RESPONSIVE HERO IMAGE
     max-width:1100px;
 }
 
+/* ===== DESKTOP ===== */
 .hero-image{
     width:100%;
     height:auto;
     display:block;
     border-radius:16px;
     box-shadow:0 10px 25px rgba(0,0,0,0.15);
-    object-fit:cover;
 }
 
-/* ===== MOBILE OPTIMALIZÁLÁS ===== */
+/* ===== MOBILE FIX ===== */
 @media (max-width:768px){
 
     .hero{
@@ -318,7 +317,13 @@ RESPONSIVE HERO IMAGE
     }
 
     .hero-image{
+        width:100%;
+        height:auto;
         border-radius:12px;
+
+        /* fontos fix mobilra */
+        object-fit:contain;
+        max-height:60vh;
     }
 }
 
