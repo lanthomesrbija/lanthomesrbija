@@ -156,13 +156,86 @@ SMALL TEXT
   </div>
 </div>
 
+```html
 <!-- =========================
-2. LOGO
+2. LOGO + NAVIGATION
 ========================= -->
 
 <div class="logo-section">
+
     <img src="images/Lanthome.png" alt="LANTHOME SRBIJA">
+
+    <nav class="top-menu">
+        <a href="#pocetna">Početna</a>
+        <a href="#prednosti">Prednosti</a>
+        <a href="#recenzije">Recenzije</a>
+        <a href="#naruci">Naruči</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
+
 </div>
+
+<style>
+.logo-section{
+    text-align:center;
+    padding:20px 15px;
+    background:#ffffff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo-section img{
+    max-width:180px;
+    width:100%;
+    margin-bottom:18px;
+}
+
+.top-menu{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:22px;
+    flex-wrap:wrap;
+}
+
+.top-menu a{
+    text-decoration:none;
+    color:#333;
+    font-size:15px;
+    font-weight:600;
+    padding:8px 12px;
+    border-radius:8px;
+    transition:all .3s ease;
+}
+
+.top-menu a:hover{
+    background:#f2f2f2;
+    color:#2ecc71;
+}
+</style>
+
+<!-- A megfelelő szekciókhoz add hozzá ezeket az ID-ket -->
+
+<section id="pocetna">
+    <!-- Kezdőoldal tartalma -->
+</section>
+
+<section id="prednosti">
+    <!-- Előnyök -->
+</section>
+
+<section id="recenzije">
+    <!-- Vásárlói vélemények -->
+</section>
+
+<section id="naruci">
+    <!-- Rendelés -->
+</section>
+
+<section id="kontakt">
+    <!-- Kapcsolat -->
+</section>
+```
+
 <!-- =========================
 3. ABOUT
 ========================= -->
