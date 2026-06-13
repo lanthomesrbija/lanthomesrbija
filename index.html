@@ -300,7 +300,7 @@ RESPONSIVE HERO IMAGE
     max-width:1100px;
 }
 
-/* ===== DESKTOP ===== */
+/* DESKTOP */
 .hero-image{
     width:100%;
     height:auto;
@@ -309,21 +309,36 @@ RESPONSIVE HERO IMAGE
     box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* ===== MOBILE FIX ===== */
+/* 🔥 MOBIL FIX (EZ A LÉNYEG) */
 @media (max-width:768px){
 
     .hero{
-        padding:10px;
+        padding:8px;
+    }
+
+    .hero-container{
+        width:100%;
     }
 
     .hero-image{
         width:100%;
         height:auto;
-        border-radius:12px;
 
-        /* fontos fix mobilra */
-        object-fit:contain;
-        max-height:60vh;
+        /* kulcs fix */
+        max-height:none;
+        object-fit:initial;
+
+        border-radius:10px;
+    }
+}
+
+/* EXTRA KICSI TELEFONOK */
+@media (max-width:480px){
+
+    .hero-image{
+        width:100%;
+        height:auto;
+        border-radius:8px;
     }
 }
 
