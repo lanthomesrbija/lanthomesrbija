@@ -263,16 +263,19 @@ KO SMO MI?
 </style>
 
 <!-- =========================
-4. PRODUCT
+4. PRODUCT (PRO VERSION)
 ========================= -->
 
-<section class="section">
+<section class="section product-section">
 
-    <!-- SZEKCIÓ CÍM -->
-    <h2 class="desktop-title">Proizvod</h2>
+    <!-- ===== 3D CÍM ===== -->
+    <div class="title-box">
+        <h2 class="desktop-title">Proizvod</h2>
+    </div>
 
-    <!-- MOBIL CÍM -->
-    <div class="mobile-product-header">
+    <!-- ===== MOBIL SZEKCIÓ ===== -->
+    <div class="mobile-product-header product-text-box">
+
         <h2>Proizvod: Lanthome Retinol Krema</h2>
 
         <p class="mobile-intro">
@@ -295,7 +298,7 @@ KO SMO MI?
         </div>
     </div>
 
-    <!-- ASZTALI ELRENDEZÉS -->
+    <!-- ===== ASZTALI ELRENDEZÉS ===== -->
     <div class="desktop-product-layout">
 
         <!-- BAL OSZLOP -->
@@ -314,7 +317,7 @@ KO SMO MI?
         <!-- JOBB OSZLOP -->
         <div class="desktop-column">
 
-            <div class="desktop-description">
+            <div class="desktop-description product-text-box">
 
                 <h2 style="margin-top:0;">
                     Lanthome Retinol Krema
@@ -349,7 +352,7 @@ KO SMO MI?
 
     </div>
 
-    <!-- MOBIL KÉPEK -->
+    <!-- ===== MOBIL KÉPEK ===== -->
     <div class="mobile-images">
 
         <img src="images/Névtelen terv (5).png"
@@ -368,7 +371,43 @@ KO SMO MI?
 
 </section>
 
+<!-- =========================
+STYLE (ADD TO YOUR CSS)
+========================= -->
 <style>
+
+/* ===== 3D CÍM ===== */
+.title-box{
+    max-width:600px;
+    margin:0 auto 30px;
+    padding:18px;
+    background:#ffffff;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.10),
+        0 3px 8px rgba(0,0,0,0.06);
+}
+
+/* ===== SZÖVEGES DOBOZ ===== */
+.product-text-box{
+    background:#ffffff;
+    padding:28px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Szöveg igazítás (margó hatás) */
+.product-text-box p{
+    text-align:justify;
+    line-height:1.9;
+}
+
+/* lista spacing */
+.benefits p,
+.mobile-benefits p{
+    margin-bottom:14px;
+}
 
 /* ===== ASZTALI ===== */
 
@@ -395,27 +434,14 @@ KO SMO MI?
 
 .desktop-description{
     width:280px;
-    text-align:left;
 }
 
-.benefits{
-    line-height:1.8;
-    margin-top:15px;
-}
-
-.gray-check{
-    color:#8a8a8a;
-    font-weight:700;
-}
-
-/* ===== MOBIL ALAPBÓL REJTETT ===== */
+/* ===== MOBIL ===== */
 
 .mobile-product-header,
 .mobile-images{
     display:none;
 }
-
-/* ===== MOBIL ===== */
 
 @media (max-width:768px){
 
@@ -426,21 +452,6 @@ KO SMO MI?
 
     .mobile-product-header{
         display:block;
-        text-align:left;
-    }
-
-    .mobile-product-header h2{
-        margin-top:0;
-        margin-bottom:15px;
-    }
-
-    .mobile-intro{
-        line-height:1.7;
-        margin-bottom:20px;
-    }
-
-    .mobile-benefits{
-        line-height:1.8;
     }
 
     .mobile-images{
@@ -454,13 +465,15 @@ KO SMO MI?
     .mobile-product-image{
         width:100%;
         max-width:350px;
-        height:auto;
         border-radius:12px;
+    }
+
+    .product-text-box{
+        padding:22px;
     }
 }
 
 </style>
-
 <!-- =========================
 5. SASTOJCI
 ========================= -->
