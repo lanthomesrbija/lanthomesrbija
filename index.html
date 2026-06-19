@@ -52,14 +52,24 @@ LOGO
 ========================= */
 
 .logo-section {
-    background:
-        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-        url('images/pexels-freestockpro-3791977.jpg');
+    background-image: url('images/pexels-freestockpro-3791977.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    text-align: center;
-    padding: 20px 0;
+
+    min-height: 180px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-section img {
+    width: 140px;
+    max-width: 80%;
+    height: auto;
+}
 }
 /* =========================
 HEADINGS (3D PINK)
