@@ -359,414 +359,333 @@ RESPONSIVE HERO IMAGE
 
 </style>
 
-<!-- =========================
-4. PRODUCT (PRO VERSION)
-========================= -->
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lanthome Retinol Krema</title>
 
-<section class="section product-section">
-
-    <!-- ===== 3D CÍM ===== -->
-    <div class="title-box">
-        <h2 class="desktop-title">Proizvod</h2>
-    </div>
-
-    <!-- ===== MOBIL SZEKCIÓ ===== -->
-    <div class="mobile-product-header product-text-box">
-
-        <h2>Proizvod: Lanthome Retinol Krema</h2>
-
-        <p class="mobile-intro">
-            Anti-age formula za obnovu kože i smanjenje bora.
-            Pomaže u regeneraciji kože, poboljšava elastičnost i vraća prirodan sjaj.
-        </p>
-
-        <div class="mobile-benefits">
-
-            <p><span class="gray-check">✓</span> Sadrži retinol koji pomaže u smanjenju pojave neželjenih bora.</p>
-
-            <p><span class="gray-check">✓</span> Kombinuje hijaluronsku kiselinu za bogatu ishranu i intenzivnu hidrataciju kože.</p>
-
-            <p><span class="gray-check">✓</span> Formula koja se brzo upija i ne ostavlja lepljiv ili mastan osećaj na licu.</p>
-
-            <p><span class="gray-check">✓</span> Pomaže u podsticanju proizvodnje kolagena za glađu i ujednačeniju kožu lica.</p>
-
-            <p><span class="gray-check">✓</span> Može se koristiti i kao podloga pre nanošenja šminke.</p>
-
-        </div>
-    </div>
-
-    <!-- ===== ASZTALI ELRENDEZÉS ===== -->
-    <div class="desktop-product-layout">
-
-        <!-- BAL OSZLOP -->
-        <div class="desktop-column">
-
-            <img src="images/Névtelen terv (5).png"
-                 alt="Lanthome Retinol Krema"
-                 class="product-image">
-
-            <img src="images/Névtelen terv (3).png"
-                 alt="Lanthome Retinol Krema"
-                 class="product-image">
-
-        </div>
-
-        <!-- JOBB OSZLOP -->
-        <div class="desktop-column">
-
-            <div class="desktop-description product-text-box">
-
-                <h2 style="margin-top:0;">
-                    Lanthome Retinol Krema
-                </h2>
-
-                <p>
-                    Anti-age formula za obnovu kože i smanjenje bora.
-                    Pomaže u regeneraciji kože, poboljšava elastičnost i vraća prirodan sjaj.
-                </p>
-
-                <div class="benefits">
-
-                    <p><span class="gray-check">✓</span> Sadrži retinol koji pomaže u smanjenju pojave neželjenih bora.</p>
-
-                    <p><span class="gray-check">✓</span> Kombinuje hijaluronsku kiselinu za bogatu ishranu i intenzivnu hidrataciju kože.</p>
-
-                    <p><span class="gray-check">✓</span> Formula koja se brzo upija i ne ostavlja lepljiv ili mastan osećaj na licu.</p>
-
-                    <p><span class="gray-check">✓</span> Pomaže u podsticanju proizvodnje kolagena za glađu i ujednačeniju kožu lica.</p>
-
-                    <p><span class="gray-check">✓</span> Može se koristiti i kao podloga pre nanošenja šminke.</p>
-
-                </div>
-
-            </div>
-
-            <img src="images/Névtelen terv (4).png"
-                 alt="Lanthome Retinol Krema"
-                 class="product-image">
-
-        </div>
-
-    </div>
-
-    <!-- ===== MOBIL KÉPEK ===== -->
-    <div class="mobile-images">
-
-        <img src="images/Névtelen terv (5).png"
-             alt="Lanthome Retinol Krema"
-             class="mobile-product-image">
-
-        <img src="images/Névtelen terv (3).png"
-             alt="Lanthome Retinol Krema"
-             class="mobile-product-image">
-
-        <img src="images/Névtelen terv (4).png"
-             alt="Lanthome Retinol Krema"
-             class="mobile-product-image">
-
-    </div>
-
-</section>
-
-<!-- =========================
-STYLE (ADD TO YOUR CSS)
-========================= -->
-    <div style="
-    max-width:700px;
-    margin:20px auto;
-    padding:15px 20px;
-    background:#ffffff;
-    border-radius:12px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.15);
-">
-
-    <div style="
-        display:flex;
-        align-items:center;
-        gap:15px;
-        flex-wrap:wrap;
-    ">
-
-        <img src="images/images.png"
-             alt="Ministarstvo zdravlja"
-             style="
-                width:90px;
-                height:auto;
-                flex-shrink:0;
-             ">
-
-        <span style="
-            font-size:15px;
-            line-height:1.5;
-            color:#333;
-        ">
-            Odobrilo Ministarstvo zdravlja Republike Srbije:
-            <a href="images/cilli san.pdf"
-               target="_blank"
-               style="
-                    color:#0066cc;
-                    font-weight:600;
-                    text-decoration:none;
-               ">
-                135/5-2026
-            </a>
-        </span>
-
-    </div>
-
-</div>
-    
-<!-- =========================
-STYLE (ADD TO YOUR CSS)
-========================= -->
 <style>
 
-/* ===== 3D CÍM ===== */
-.title-box{
-    max-width:600px;
-    margin:0 auto 30px;
-    padding:18px;
-    background:#ffffff;
+/* =========================
+GLOBAL
+========================= */
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f5f5f5;
+    color:#111;
+}
+
+.container{
+    max-width:1100px;
+    margin:0 auto;
+    padding:40px 20px;
+}
+
+/* =========================
+PRODUCT WRAPPER
+========================= */
+
+.product-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    background:#fff;
+    padding:30px;
     border-radius:18px;
-    text-align:center;
-    box-shadow:
-        0 8px 20px rgba(0,0,0,0.10),
-        0 3px 8px rgba(0,0,0,0.06);
+    box-shadow:0 15px 35px rgba(0,0,0,0.12);
 }
 
-/* ===== SZÖVEGES DOBOZ ===== */
-.product-text-box{
-    background:#ffffff;
-    padding:28px;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+/* IMAGES */
+
+.product-image img{
+    width:100%;
+    border-radius:16px;
+    margin-bottom:10px;
 }
 
-/* Szöveg igazítás (margó hatás) */
-.product-text-box p{
-    text-align:justify;
-    line-height:1.9;
+/* TITLE */
+
+.product-title{
+    font-size:28px;
+    font-weight:800;
+    margin-bottom:10px;
 }
 
-/* lista spacing */
-.benefits p,
-.mobile-benefits p{
-    margin-bottom:14px;
-}
+/* PRICE */
 
-/* ===== ASZTALI ===== */
-
-.desktop-product-layout{
+.price-row{
     display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
+    align-items:center;
+    gap:10px;
+    margin-bottom:15px;
 }
 
-.desktop-column{
+.old-price{
+    text-decoration:line-through;
+    color:#888;
+}
+
+.new-price{
+    font-size:22px;
+    font-weight:800;
+}
+
+.badge{
+    background:#e60023;
+    color:#fff;
+    font-size:12px;
+    padding:4px 8px;
+    border-radius:6px;
+    font-weight:700;
+}
+
+/* QTY */
+
+.qty-box{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:15px 0;
+}
+
+.qty-box button{
+    width:38px;
+    height:38px;
+    border:none;
+    background:#111;
+    color:#fff;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.qty-box input{
+    width:60px;
+    text-align:center;
+}
+
+/* BUY BUTTON */
+
+.buy-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    background:#ff3ea5;
+    color:#fff;
+    font-weight:800;
+    border-radius:10px;
+    cursor:pointer;
+    margin-bottom:20px;
+}
+
+/* =========================
+ACCORDION
+========================= */
+
+.accordion{
     display:flex;
     flex-direction:column;
-    gap:20px;
+    gap:12px;
+}
+
+.acc-item{
+    background:#fff;
+    border-radius:14px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    overflow:hidden;
+}
+
+/* HEADER */
+
+.acc-header{
+    padding:14px 16px;
+    cursor:pointer;
+    font-weight:700;
+    display:flex;
+    justify-content:space-between;
     align-items:center;
+    background:#fafafa;
 }
 
-.product-image{
-    width:280px;
-    height:280px;
-    object-fit:cover;
-    border-radius:12px;
+.arrow{
+    transition:0.3s;
 }
 
-.desktop-description{
-    width:280px;
-}
+/* CONTENT */
 
-/* ===== MOBIL ===== */
-
-.mobile-product-header,
-.mobile-images{
+.acc-content{
     display:none;
+    padding:14px 16px;
+    line-height:1.7;
 }
 
-@media (max-width:768px){
+/* =========================
+RESPONSIVE
+========================= */
 
-    .desktop-title,
-    .desktop-product-layout{
-        display:none;
-    }
-
-    .mobile-product-header{
-        display:block;
-    }
-
-    .mobile-images{
-        display:flex;
-        flex-direction:column;
-        gap:20px;
-        margin-top:25px;
-        align-items:center;
-    }
-
-    .mobile-product-image{
-        width:100%;
-        max-width:350px;
-        border-radius:12px;
-    }
-
-    .product-text-box{
-        padding:22px;
+@media(max-width:768px){
+    .product-wrapper{
+        grid-template-columns:1fr;
     }
 }
 
 </style>
-<!-- =========================
-5. SASTOJCI
-========================= -->
+</head>
 
-<section class="section" style="background:#fafafa; padding:20px;">
+<body>
 
-    <h2>Sastojci:</h2>
+<div class="container">
 
-    <!-- TOGGLE BUTTON -->
-    <button id="sastojciBtn" onclick="toggleSastojci()"
-        style="
-            background:#000;
-            color:white;
-            padding:12px 18px;
-            border:none;
-            border-radius:8px;
-            cursor:pointer;
-            font-weight:bold;
-            display:inline-flex;
-            align-items:center;
-            gap:10px;
-            transition:0.3s;
-        ">
-        Pogledaj pažljivo odabrane sastojke
+<div class="product-wrapper">
 
-        <span id="arrow"
-            style="
-                display:inline-block;
-                transition:transform 0.3s ease;
-                font-size:18px;
-            ">
-            ▼
-        </span>
-    </button>
-
-    <!-- HIDDEN CONTENT -->
-    <div id="sastojciBox"
-         style="
-            display:none;
-            margin-top:20px;
-            text-align:left;
-            max-width:600px;
-            margin-left:auto;
-            margin-right:auto;
-         ">
-
-        <p>• Voda</p>
-        <p>• Cetil-heksanoat</p>
-        <p>• Glicerin</p>
-        <p>• Propilen glikol</p>
-        <p>• Kaprilni trigliceridi</p>
-        <p>• Cetearyl alkohol</p>
-        <p>• Ciklopentasiloksan</p>
-        <p>• Cetearyl glukozid</p>
-        <p>• C20-22 alkil fosfat</p>
-        <p>• C20-22 alkoholi</p>
-        <p>• Dimetikon</p>
-        <p>• Karbomer</p>
-        <p>• Alantoin</p>
-        <p>• Retinil palmitat (vitamin A derivat)</p>
-        <p>• Tokoferol (vitamin E)</p>
-        <p>• Diazolidinil urea</p>
-        <p>• Jodopropinil butilkarbamat</p>
-        <p>• Metilparaben</p>
-        <p>• Propilparaben</p>
-        <p>• Aroma (mirisna komponenta)</p>
-
+    <!-- LEFT -->
+    <div class="product-image">
+        <img src="images/Névtelen terv (5).png">
+        <img src="images/Névtelen terv (3).png">
+        <img src="images/Névtelen terv (4).png">
     </div>
 
-    <!-- TOGGLE SCRIPT -->
-    <script>
-    function toggleSastojci() {
-        var box = document.getElementById("sastojciBox");
-        var arrow = document.getElementById("arrow");
-
-        if (box.style.display === "none") {
-            box.style.display = "block";
-            arrow.style.transform = "rotate(180deg)";
-        } else {
-            box.style.display = "none";
-            arrow.style.transform = "rotate(0deg)";
-        }
-    }
-    </script>
-
-</section>
-
-
-<!-- =========================
-6. UPOTREBA
-========================= -->
-
-<section class="section">
-
-<h2>Uputstvo za upotrebu:</h2>
-
-<div style="display:flex; justify-content:center; align-items:center; gap:20px; flex-wrap:wrap; max-width:900px; margin:0 auto;">
-
-    <!-- IMAGE -->
+    <!-- RIGHT -->
     <div>
-        <img src="images/3.png"
-             style="width:300px; height:auto; border-radius:12px; display:block;">
+
+        <div class="product-title">Lanthome Retinol Krema</div>
+
+        <div class="price-row">
+            <span class="old-price">2873 RSD</span>
+            <span class="new-price">2299 RSD</span>
+            <span class="badge">AKCIJA</span>
+        </div>
+
+        <div class="qty-box">
+            <button onclick="changeQty(-1)">-</button>
+            <input id="qty" value="1">
+            <button onclick="changeQty(1)">+</button>
+        </div>
+
+        <button class="buy-btn" onclick="scrollToBottom()">Poručujem</button>
+
+        <!-- ACCORDION -->
+        <div class="accordion">
+
+            <!-- OPIS -->
+            <div class="acc-item">
+                <div class="acc-header" onclick="toggle(this)">
+                    Opis <span class="arrow">▼</span>
+                </div>
+                <div class="acc-content">
+
+                    Anti-age formula za obnovu kože i smanjenje bora.  
+                    Pomaže u regeneraciji kože, poboljšava elastičnost i vraća prirodan sjaj.<br><br>
+
+                    ✓ Sadrži retinol koji pomaže u smanjenju pojave neželjenih bora.<br>
+                    ✓ Kombinuje hijaluronsku kiselinu za hidrataciju.<br>
+                    ✓ Brzo upijanje bez masnog efekta.<br>
+                    ✓ Podstiče kolagen.<br>
+                    ✓ Može kao makeup baza.
+
+                </div>
+            </div>
+
+            <!-- SASTOJCI -->
+<div class="acc-item">
+    <div class="acc-header" onclick="toggle(this)">
+        Sastojci <span class="arrow">▼</span>
     </div>
 
-    <!-- TEXT -->
-    <div style="max-width:450px; text-align:left; line-height:1.8;">
+    <div class="acc-content">
 
-        <p>1. Temeljno očistite lice toplom vodom, zatim ga nežno osušite.</p>
+        <ul style="padding-left:20px; line-height:1.8; margin:0;">
+            <li>Voda</li>
+            <li>Cetil-heksanoat</li>
+            <li>Glicerin</li>
+            <li>Propilen glikol</li>
+            <li>Kaprilni trigliceridi</li>
+            <li>Cetearyl alkohol</li>
+            <li>Ciklopentasiloksan</li>
+            <li>Retinil palmitat</li>
+            <li>Vitamin E</li>
+            <li>Alantoin</li>
+            <li>Karbomer</li>
+            <li>Parabeni</li>
+            <li>Aroma</li>
+        </ul>
 
-        <p>2. Uzmite malu količinu kreme na vrhove prstiju i ravnomerno je nanesite na lice i vrat. Pazite da ne dođe u kontakt sa očima.</p>
+    </div>
+</div>
 
-        <p>3. Nježno umasirajte kremu u kožu kružnim pokretima dok se potpuno ne upije.</p>
+            <!-- UPOTREBA -->
+            <div class="acc-item">
+                <div class="acc-header" onclick="toggle(this)">
+                    Upotreba <span class="arrow">▼</span>
+                </div>
+                <div class="acc-content">
 
-        <p>4. Koristite kremu jednom dnevno, po mogućnosti uveče, kako bi retinol tokom noći delovao dok se koža regeneriše.</p>
+    <img src="images/3.png" style="width:100%; border-radius:12px; margin-bottom:12px;">
 
-        <p>5. Pošto retinol može povećati osetljivost kože na sunce, preporučuje se upotreba širokospektralne kreme za sunčanje tokom dana. Izbegavajte direktno sunce dok se krema potpuno ne upije.</p>
+    <ol style="padding-left:20px; line-height:1.8; margin:0;">
+        <li>Temeljno očistite lice toplom vodom, zatim ga nežno osušite.</li>
 
-        <p>6. Za maksimalni efekat preporučuje se večernja upotreba.</p>
+        <li>Uzmite malu količinu kreme na vrhove prstiju i ravnomerno je nanesite na lice i vrat. Pazite da ne dođe u kontakt sa očima.</li>
+
+        <li>Nježno umasirajte kremu u kožu kružnim pokretima dok se potpuno ne upije.</li>
+
+        <li>Koristite kremu jednom dnevno, po mogućnosti uveče, kako bi retinol tokom noći delovao dok se koža regeneriše.</li>
+
+        <li>Pošto retinol može povećati osetljivost kože na sunce, preporučuje se upotreba širokospektralne kreme za sunčanje tokom dana. Izbegavajte direktno sunce dok se krema potpuno ne upije.</li>
+
+        <li>Za maksimalni efekat preporučuje se večernja upotreba.</li>
+    </ol>
+
+</div>
+            </div>
+
+        </div>
 
     </div>
 
 </div>
 
-</section>
-
-<!-- =========================
-7. BEFORE AFTER
-========================= -->
-
-<section class="section" style="background:#fafafa; padding:30px 10px;">
-
-<h2 style="text-align:center;">Pre / Posle</h2>
-
-<p style="max-width:600px; margin:10px auto 20px auto; text-align:center; line-height:1.6;">
-Ova slika prikazuje efekat naše kreme na kožu pre i posle upotrebe.  
-Vidljivo je poboljšanje u smanjenju bora i finih linija.  
-Koža izgleda glatkije, zategnutije i zdravije.  
-Redovna upotreba pomaže u obnovi prirodnog izgleda kože.
-</p>
-
-<!-- SINGLE IMAGE -->
-<div style="display:flex; justify-content:center;">
-
-    <img src="images/2.png"
-         style="width:100%; max-width:500px; height:auto; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.15);">
 </div>
 
-</section>
+<script>
+
+function changeQty(v){
+    let q=document.getElementById("qty");
+    let val=parseInt(q.value);
+    if(isNaN(val)) val=1;
+    val+=v;
+    if(val<1) val=1;
+    q.value=val;
+}
+
+function toggle(el){
+    let content = el.nextElementSibling;
+    let arrow = el.querySelector(".arrow");
+
+    if(content.style.display === "block"){
+        content.style.display = "none";
+        arrow.style.transform = "rotate(0deg)";
+    }else{
+        content.style.display = "block";
+        arrow.style.transform = "rotate(180deg)";
+    }
+}
+
+// NEW FUNCTION
+function scrollToBottom(){
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+    });
+}
+
+</script>
+
+</body>
+</html>
     
     <!-- =========================
 FAQ – ČESTA PITANJA KUPACA
