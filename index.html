@@ -1244,5 +1244,29 @@ window.addEventListener("load", checkForm);
 
 </section>
 
+
+<script>
+let current = 1;
+
+const t1 = document.getElementById("giftText1");
+const t2 = document.getElementById("giftText2");
+
+t1.classList.add("active");
+
+setInterval(() => {
+
+    if(current === 1){
+        t1.classList.remove("active");
+        t2.classList.add("active");
+        current = 2;
+    } else {
+        t2.classList.remove("active");
+        t1.classList.add("active");
+        current = 1;
+    }
+
+}, 4000);
+</script>
+
 </body>
 </html>
