@@ -22,29 +22,30 @@ body {
 TOP BAR (PINK)
 ========================= */
 
-.top-bar {
+.top-bar{
     background: linear-gradient(90deg, #ff66c4, #ff66c4);
     color: white;
-    overflow: hidden;
-    white-space: nowrap;
-    padding: 10px 0;
+    text-align: center;
+    padding: 10px 10px;
     font-weight: bold;
     font-size: 14px;
+    position: relative;
+    height: 40px;
+    overflow: hidden;
 }
 
-.top-bar-content {
-    display: inline-block;
-    white-space: nowrap;
-    animation: scrollText 25s linear infinite;
+.top-bar-text{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
 }
 
-@keyframes scrollText {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
+.top-bar-text.active{
+    opacity: 1;
 }
 
 /* =========================
@@ -192,10 +193,19 @@ GIFT BAR (GOLD)
 ========================= -->
 
 <div class="top-bar">
-  <div class="top-bar-content">
-    ⏳20% POPUSTA ZA PRVU KUPOVINU • 🚛BESPLATNA DOSTAVA • 💰SIGURNO PLAĆANJE KARTICOM • 📬BRZA ISPORUKA • &nbsp;&nbsp;&nbsp;
-    ⏳20% POPUSTA ZA PRVU KUPOVINU • 🚛BESPLATNA DOSTAVA • 💰SIGURNO PLAĆANJE KARTICOM • 📬BRZA ISPORUKA • 
+
+  <div class="top-bar-text active" id="tb1">
+    ⏳ 20% POPUSTA ZA PRVU KUPOVINU
   </div>
+
+  <div class="top-bar-text" id="tb2">
+    🚛 BESPLATNA DOSTAVA ŠIROM SRBIJE
+  </div>
+
+  <div class="top-bar-text" id="tb3">
+    💰 SIGURNO PLAĆANJE KARTICOM • 📬 BRZA ISPORUKA
+  </div>
+
 </div>
 
 <!-- ========================= 
@@ -1264,6 +1274,30 @@ setInterval(() => {
         t1.classList.add("active");
         current = 1;
     }
+
+}, 4000);
+</script>
+
+<script>
+let i = 0;
+
+const bars = [
+  document.getElementById("tb1"),
+  document.getElementById("tb2"),
+  document.getElementById("tb3")
+];
+
+bars[0].classList.add("active");
+
+setInterval(() => {
+
+    bars.forEach(b => b.classList.remove("active"));
+
+    i++;
+
+    if(i >= bars.length) i = 0;
+
+    bars[i].classList.add("active");
 
 }, 4000);
 </script>
