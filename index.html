@@ -733,53 +733,226 @@ function scrollToCheckout(){
 </html>
 
 <!-- =========================
- resenje
-========================= -->    
-<div style="
-    max-width:700px;
-    margin:20px auto;
-    padding:15px 20px;
-    background:#ffffff;
-    border-radius:12px;
-    box-shadow:0 8px 25px rgba(0,0,0,0.15);
-">
+7. BEFORE AFTER
+========================= -->
 
-    <div style="
-        display:flex;
-        align-items:center;
-        gap:15px;
-        flex-wrap:wrap;
-    ">
+<section class="section" style="background:#fafafa; padding:30px 10px;">
 
-        <img src="images/images.png"
-             alt="Ministarstvo zdravlja"
-             style="
-                width:60px;
-                height:auto;
-                flex-shrink:0;
-             ">
+<h2 style="text-align:center;">Pre / Posle</h2>
 
-        <span style="
-            font-size:15px;
-            line-height:1.5;
-            color:#333;
-        ">
-            Odobrilo Ministarstvo zdravlja Republike Srbije:
-            <a href="images/cilli san.pdf"
-               target="_blank"
-               style="
-                    color:#0066cc;
-                    font-weight:600;
-                    text-decoration:none;
-               ">
-                135/5-2026
-            </a>
-        </span>
+<p style="max-width:600px; margin:10px auto 20px auto; text-align:center; line-height:1.6;">
+Ova slika prikazuje efekat naše kreme na kožu pre i posle upotrebe.  
+Vidljivo je poboljšanje u smanjenju bora i finih linija.  
+Koža izgleda glatkije, zategnutije i zdravije.  
+Redovna upotreba pomaže u obnovi prirodnog izgleda kože.
+</p>
+
+<!-- SINGLE IMAGE -->
+<div style="display:flex; justify-content:center;">
+
+    <img src="images/2.png"
+         style="width:100%; max-width:500px; height:auto; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.15);">
+</div>
+
+</section>
+    
+    <!-- =========================
+FAQ – ČESTA PITANJA KUPACA
+========================= -->
+
+<section class="faq-section">
+
+    <div class="faq-container">
+
+        <h2 class="faq-title">
+            Najčešća pitanja naših kupaca:
+        </h2>
+
+        <!-- 1 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>Da li je bezbedno koristiti retinol kremu svakodnevno?</span>
+                <span class="faq-arrow">▼</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Da. Krema je formulisana tako da uz redovnu upotrebu podržava prirodnu obnovu i negu kože. Uz pridržavanje preporučenog načina korišćenja, pogodna je za većinu tipova kože.
+                </p>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>Da li je pogodna za osetljivu kožu?</span>
+                <span class="faq-arrow">▼</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Da. Formula sadrži pažljivo odabrane sastojke koji pružaju nežnu negu. Osobama sa osetljivijom kožom preporučuje se postepeno uvođenje proizvoda kako bi se koža prilagodila retinolu.
+                </p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>Da li ću dobiti isti proizvod kao na fotografijama?</span>
+                <span class="faq-arrow">▼</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Naravno. Sve naše proizvode predstavljamo autentičnim fotografijama, tako da ćete dobiti upravo ono pakovanje i kvalitet koji vidite na slikama.
+                </p>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>Kod kojih problema se preporučuje upotreba?</span>
+                <span class="faq-arrow">▼</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Retinol krema može pomoći u smanjenju vidljivosti finih linija i bora, podržava obnovu kože, poboljšava teksturu kože i doprinosi svežijem i blistavijem izgledu tena.
+                </p>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>Da li je dobar izbor i kao poklon?</span>
+                <span class="faq-arrow">▼</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Apsolutno. Kvalitetna nega kože je uvek pažljiv i lep znak pažnje. Bilo da je poklanjate dragoj osobi ili birate za sebe, pruža osećaj brige, lepote i posebnog trenutka.
+                </p>
+            </div>
+        </div>
 
     </div>
 
-</div>
+</section>
 
+<style>
+
+.faq-section{
+    background:#f7f7f7;
+    padding:60px 20px;
+}
+
+.faq-container{
+    max-width:900px;
+    margin:0 auto;
+}
+
+.faq-title{
+    color:#000;
+    font-size:32px;
+    font-weight:500;
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.faq-item{
+    background:#fff;
+    border-radius:16px;
+    margin-bottom:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    overflow:hidden;
+}
+
+.faq-question{
+    width:100%;
+    background:#fff;
+    border:none;
+    cursor:pointer;
+    padding:22px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    text-align:left;
+    font-size:18px;
+    font-weight:700;
+    color:#000;
+}
+
+.faq-arrow{
+    transition:transform .3s ease;
+    font-size:16px;
+}
+
+.faq-item.active .faq-arrow{
+    transform:rotate(180deg);
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .35s ease;
+}
+
+.faq-answer p{
+    margin:0;
+    padding:0 25px 25px 25px;
+    line-height:1.8;
+    color:#444;
+    font-size:16px;
+}
+
+@media (max-width:768px){
+
+    .faq-section{
+        padding:40px 15px;
+    }
+
+    .faq-title{
+        font-size:26px;
+    }
+
+    .faq-question{
+        font-size:16px;
+        padding:18px 20px;
+    }
+
+    .faq-answer p{
+        font-size:15px;
+        padding:0 20px 20px 20px;
+    }
+}
+
+</style>
+
+<script>
+
+document.querySelectorAll(".faq-question").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const item = button.parentElement;
+        const answer = item.querySelector(".faq-answer");
+
+        item.classList.toggle("active");
+
+        if(item.classList.contains("active")){
+            answer.style.maxHeight = answer.scrollHeight + "px";
+        } else {
+            answer.style.maxHeight = null;
+        }
+
+    });
+
+});
+
+</script>
     <!-- =========================
  TOP BAR
 ========================= -->
