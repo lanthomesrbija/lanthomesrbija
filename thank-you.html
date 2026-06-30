@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-  <script>
-fbq('track','Purchase');
-</script>
+
   <meta charset="UTF-8">
   <title>Hvala na narudžbini</title>
 
-  <!-- META PIXEL EVENT -->
+  <!-- META PIXEL BASE (KÖTELEZŐ) -->
   <script>
-    fbq('track', 'Purchase');
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1754336635564131');
+    fbq('track', 'PageView');
   </script>
 
   <style>
@@ -44,6 +52,7 @@ fbq('track','Purchase');
       color: #1a7f37;
     }
   </style>
+
 </head>
 
 <body>
@@ -63,6 +72,16 @@ fbq('track','Purchase');
       Naš tim će vas uskoro kontaktirati sa svim detaljima.
     </p>
   </div>
+
+  <!-- PURCHASE EVENT (CSAK EGYSZER!) -->
+  <script>
+    window.addEventListener('load', function () {
+      fbq('track', 'Purchase', {
+        value: 2299,
+        currency: 'RSD'
+      });
+    });
+  </script>
 
 </body>
 </html>
