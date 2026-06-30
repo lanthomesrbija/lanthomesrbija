@@ -1168,10 +1168,18 @@ btn.addEventListener("click", async () => {
     console.log(result);
 
     if (result.status === "success") {
-      window.location.href = WHOP_URL;
-    } else {
-      throw new Error(result.message);
-    }
+
+    // Meta Pixel - Lead esemény
+    fbq('track', 'Lead');
+
+    // Kis várakozás, hogy az esemény biztosan elküldődjön
+    setTimeout(() => {
+        window.location.href = WHOP_URL;
+    }, 300);
+
+} else {
+    throw new Error(result.message);
+}
 
   } catch (err) {
 
