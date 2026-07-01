@@ -1070,37 +1070,48 @@ CHECKOUT FULL SYSTEM (FINAL FIX)
 </section>
 
 <!-- CTA -->
-<section style="text-align:center;padding:20px;">
+<section style="text-align:center; padding:20px; display:flex; flex-direction:column; align-items:center; gap:12px;">
 
-<button id="ctaBtn" type="button"
-style="padding:16px 28px;font-size:18px;font-weight:bold;border:none;border-radius:12px;
-background:#7ec8ff;color:#fff;opacity:.5;pointer-events:none;">
-Idem na plaćanje
-</button>
+  <button id="ctaBtn" type="button"
+    style="
+      width:300px;
+      height:56px;
+      font-size:18px;
+      font-weight:bold;
+      border:none;
+      border-radius:12px;
+      background:#7ec8ff;
+      color:#fff;
+      opacity:.5;
+      cursor:not-allowed;
+    ">
+    Plati karticom odmah
+  </button>
 
-<br><br>
+  <button id="codBtn" type="button"
+    style="
+      width:300px;
+      height:56px;
+      font-size:18px;
+      font-weight:bold;
+      border:none;
+      border-radius:12px;
+      background:#222;
+      color:#fff;
+      opacity:.5;
+      cursor:not-allowed;
+    ">
+    Poruči pouzećem (COD)
+  </button>
 
-<button id="codBtn" type="button"
-style="
-padding:16px 28px;
-font-size:18px;
-font-weight:bold;
-border:none;
-border-radius:12px;
-background:#222;
-color:#fff;
-opacity:.5;
-pointer-events:none;
-">
-Poruči pouzećem (COD)
-</button>
+  <p style="margin:10px 0 0; line-height:1.4;">
+    Sigurno plaćanje karticom preko WHOP sistema<br>
+    🎁 poklon iznenađenja<br>
+    🚛 BESPLATNA DOSTAVA
+  </p>
 
-<p>Sigurno plaćanje karticom preko WHOP sistema
-+🎁poklon iznenađenja
-+🚛BESPLATNA DOSTAVA</p>
-
-<img src="images/EU-Medium-nobg-lightmode.png"
-style="width:180px;max-width:80%;margin-top:10px;">
+  <img src="images/EU-Medium-nobg-lightmode.png"
+       style="width:180px; max-width:80%; margin-top:10px;">
 
 </section>
 
@@ -1134,6 +1145,7 @@ const WHOP_URL = "https://whop.com/checkout/plan_0i0xFH21g8h8C";
 
 const form = document.getElementById("orderForm");
 const btn = document.getElementById("ctaBtn");
+const codBtn = document.getElementById("codBtn");
 
 function checkForm() {
 
@@ -1144,6 +1156,7 @@ function checkForm() {
     document.querySelector('[name="zip"]').value.trim() &&
     document.querySelector('[name="phone"]').value.trim();
 
+  // CARD BUTTON
   btn.disabled = !ok;
 
   if (ok) {
@@ -1155,10 +1168,27 @@ function checkForm() {
     btn.style.opacity = ".5";
     btn.style.pointerEvents = "none";
   }
+
+  // COD BUTTON (Ugyanaz a feltétel)
+  codBtn.disabled = !ok;
+
+  if (ok) {
+    codBtn.style.background = "#222";
+    codBtn.style.opacity = "1";
+    codBtn.style.pointerEvents = "auto";
+  } else {
+    codBtn.style.opacity = ".5";
+    codBtn.style.pointerEvents = "none";
+  }
 }
 
 form.addEventListener("input", checkForm);
 
+//
+// =========================
+// CARD PAYMENT FLOW
+// =========================
+//
 btn.addEventListener("click", async () => {
 
   btn.disabled = true;
@@ -1172,11 +1202,12 @@ btn.addEventListener("click", async () => {
     phone: document.querySelector('[name="phone"]').value.trim(),
     email: document.querySelector('[name="email"]').value.trim(),
     note: document.querySelector('[name="note"]').value.trim()
+    // ❗ nincs order_type (ahogy kérted)
   };
 
   try {
 
-    const response = await fetch(SCRIPT_URL, {
+    await fetch(SCRIPT_URL, {
       method: "POST",
       headers: {
         "Content-Type": "text/plain;charset=utf-8"
@@ -1184,32 +1215,70 @@ btn.addEventListener("click", async () => {
       body: JSON.stringify(data)
     });
 
-    const result = await response.json();
+    fbq('track', 'Lead', {
+      content_name: 'Card Order'
+    });
 
-    console.log(result);
-
-    if (result.status === "success") {
-
-    // Meta Pixel - Lead esemény
-    fbq('track', 'Lead');
-
-    // Kis várakozás, hogy az esemény biztosan elküldődjön
     setTimeout(() => {
-        window.location.href = WHOP_URL;
+      window.location.href = WHOP_URL;
     }, 300);
 
-} else {
-    throw new Error(result.message);
-}
-
   } catch (err) {
-
-    console.error(err);
 
     alert("Greška pri slanju.");
 
     btn.disabled = false;
     btn.innerText = "Idem na plaćanje";
+
+    checkForm();
+  }
+
+});
+
+//
+// =========================
+// COD FLOW
+// =========================
+//
+codBtn.addEventListener("click", async () => {
+
+  codBtn.disabled = true;
+  codBtn.innerText = "Slanje...";
+
+  const data = {
+    name: document.querySelector('[name="name"]').value.trim(),
+    address: document.querySelector('[name="address"]').value.trim(),
+    city: document.querySelector('[name="city"]').value.trim(),
+    zip: document.querySelector('[name="zip"]').value.trim(),
+    phone: document.querySelector('[name="phone"]').value.trim(),
+    email: document.querySelector('[name="email"]').value.trim(),
+    note: document.querySelector('[name="note"]').value.trim(),
+
+    order_type: "COD"
+  };
+
+  try {
+
+    await fetch(SCRIPT_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8"
+      },
+      body: JSON.stringify(data)
+    });
+
+    fbq('track', 'Lead', {
+      content_name: 'COD Order'
+    });
+
+    window.location.href = "cod-hvala.html";
+
+  } catch (err) {
+
+    alert("Greška pri slanju.");
+
+    codBtn.disabled = false;
+    codBtn.innerText = "Poruči pouzećem (COD)";
 
     checkForm();
   }
