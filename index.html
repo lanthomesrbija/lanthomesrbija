@@ -89,17 +89,23 @@ LOGO
     width: 100%;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
-    padding: 15px 25px;
-    box-sizing: border-box;
+    position: relative;
 }
 
 .logo-section img {
     width: 140px;
     max-width: 80%;
     height: auto;
+}
+
+.top-menu {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .top-menu a {
