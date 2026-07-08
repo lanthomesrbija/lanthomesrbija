@@ -82,11 +82,12 @@ p {font-size:18px; line-height:1.6;}
 
 <script>
 window.addEventListener('DOMContentLoaded', function () {
-  if (!window.__codLeadFired) {
-    window.__codLeadFired = true;
+  if (!window.__codPurchaseFired) {
+    window.__codPurchaseFired = true;
 
-    fbq('track', 'Lead', {
-      content_name: 'COD Order'
+    fbq('track', 'Purchase', {
+      value: 2299,
+      currency: 'RSD'
     });
   }
 });
