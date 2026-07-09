@@ -36,21 +36,29 @@ h1 {
 }
 
  .back-btn {
-    display:inline-block;
-    margin:30px auto 10px;
-    padding:14px 22px;
-    background:#2ecc71;
-    color:#fff;
-    text-decoration:none;
-    border-radius:10px;
-    font-weight:bold;
-    font-size:16px;
-    transition:0.2s;
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    z-index: 9999;
+
+    display: inline-block;
+    padding: 15px 30px;
+
+    background: #2ecc71;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 12px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transition: background 0.2s ease;
 }
 
 .back-btn:hover {
-    background:#28b765;
-}   
+    background: #28b765;
+}
 
 
 /* ===== VÁSÁRLÓI VISSZAJELZÉS BLOKK ===== */
