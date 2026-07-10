@@ -239,6 +239,42 @@ GIFT BAR (GOLD)
     position: relative;
 }
 
+/* =========================
+lebegő gomb
+========================= */
+    .back-btn {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    z-index: 9999;
+
+    display: inline-block;
+    padding: 16px 28px;
+
+    background: #2ecc71;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: center;
+    border-radius: 12px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transition: background .2s ease, opacity .3s ease;
+}
+
+.back-btn:hover {
+    background: #28b765;
+}
+
+.back-btn.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+    
+
 </style>
 </head>
 
@@ -1458,5 +1494,31 @@ setInterval(() => {
 }, 4000);
 </script>
 
+<div style="text-align:center; margin-top:40px;">
+    <a href="index.html#checkout" class="back-btn" id="floatingBtn">
+        🚚 BESPLATNA DOSTAVA<br>
+        🎁 GRATIS POKLON<br>
+        👇 PORUČI SADA
+    </a>
+</div>
+
+<script>
+
+const floatingBtn = document.getElementById("floatingBtn");
+const checkout = document.getElementById("checkout");
+
+window.addEventListener("scroll", () => {
+
+    const rect = checkout.getBoundingClientRect();
+
+    if(rect.top <= window.innerHeight * 0.7){
+        floatingBtn.classList.add("hide");
+    }else{
+        floatingBtn.classList.remove("hide");
+    }
+
+});
+
+</script>
 </body>
 </html>
