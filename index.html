@@ -1188,9 +1188,7 @@ btn.addEventListener("click", async () => {
       body: JSON.stringify(data)
     });
 
-    fbq('track', 'Lead', {
-      content_name: 'Card Order'
-    });
+    fbq('track', 'InitiateCheckout');
 
     setTimeout(() => {
       window.location.href = WHOP_URL;
