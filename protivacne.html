@@ -994,7 +994,9 @@ btn.addEventListener("click", async () => {
       body: JSON.stringify(data)
     });
 
-    fbq('track', 'InitiateCheckout');
+    fbq('track', 'InitiateCheckout', {
+        content_name: 'Lanthome Acne Control Gel'
+    });
 
     setTimeout(() => {
       window.location.href = WHOP_URL;
