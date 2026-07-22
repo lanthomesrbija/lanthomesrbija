@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+
+<meta charset="UTF-8">
+<title>Hvala na narudžbini</title>
+
+<!-- META PIXEL BASE -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1754336635564131');
+fbq('track', 'PageView');
+</script>
+
+<style>
+body {
+  font-family: Arial;
+  background:#f7f7f7;
+  text-align:center;
+  padding:60px;
+  color:#222;
+}
+
+.box {
+  background:white;
+  padding:40px;
+  border-radius:12px;
+  max-width:600px;
+  margin:auto;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+h1 {color:#2c2c2c;}
+p {font-size:18px; line-height:1.6;}
+.highlight {font-weight:bold; color:#1a7f37;}
+
+.cta-btn {
+  display:inline-block;
+  margin-top:25px;
+  padding:14px 22px;
+  background:#2ecc71;
+  color:#fff;
+  text-decoration:none;
+  border-radius:10px;
+  font-weight:bold;
+  font-size:16px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+  <h1>Hvala na narudžbini!</h1>
+
+  <p>Poštovani kupče, uspešno ste poslali svoju narudžbinu.</p>
+
+  <p class="highlight">
+    Vaša porudžbina je primljena i biće obrađena kao plaćanje pouzećem (COD).
+  </p>
+
+  <p>
+    Naš tim će vas uskoro kontaktirati radi potvrde i isporuke.
+  </p>
+
+  <!-- 🔥 VISSZA GOMB -->
+  <a href="/" class="cta-btn">
+    Povratak na početnu stranicu
+  </a>
+
+</div>
+
+<script>
+window.addEventListener('DOMContentLoaded', function () {
+  if (!window.__codPurchaseFired) {
+    window.__codPurchaseFired = true;
+
+    fbq('track', 'Purchase', {
+      content_name: 'Lanthome Acne Control Gel',
+      content_type: 'product',
+      value: 2299,
+      currency: 'RSD'
+    });
+  }
+});
+</script>
+
+</body>
+</html>
