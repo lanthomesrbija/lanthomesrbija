@@ -980,6 +980,8 @@ btn.addEventListener("click", async () => {
   btn.innerText = "Slanje...";
 
   const data = {
+    product_name: "Lanthome Acne Control Gel",
+
     name: document.querySelector('[name="name"]').value.trim(),
     address: document.querySelector('[name="address"]').value.trim(),
     city: document.querySelector('[name="city"]').value.trim(),
@@ -987,8 +989,7 @@ btn.addEventListener("click", async () => {
     phone: document.querySelector('[name="phone"]').value.trim(),
     email: document.querySelector('[name="email"]').value.trim(),
     note: document.querySelector('[name="note"]').value.trim()
-    // ❗ nincs order_type (ahogy kérted)
-  };
+};
 
   try {
 
@@ -1031,6 +1032,8 @@ codBtn.addEventListener("click", async () => {
   codBtn.innerText = "Slanje...";
 
   const data = {
+    product_name: "Lanthome Acne Control Gel",
+
     name: document.querySelector('[name="name"]').value.trim(),
     address: document.querySelector('[name="address"]').value.trim(),
     city: document.querySelector('[name="city"]').value.trim(),
@@ -1040,7 +1043,7 @@ codBtn.addEventListener("click", async () => {
     note: document.querySelector('[name="note"]').value.trim(),
 
     order_type: "COD"
-  };
+};
 
   try {
 
