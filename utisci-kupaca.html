@@ -840,26 +840,36 @@ Hvala! Vaše iskustvo je uspešno poslato. ❤️
 
 const REVIEW_SCRIPT="https://script.google.com/macros/s/AKfycbwZ53b6K2iH0F7G2wOSg_iMx0z9oByaUw2IUYKVdmRaxOYhG-BFOgIZnsgSDweIAJrX/exec";
 
-document.getElementById("reviewForm").addEventListener("submit",async function(e){
+document.getElementById("reviewForm").addEventListener("submit", async function(e){
 
-e.preventDefault();
+    e.preventDefault();
 
-const data={
-name:document.getElementById("reviewName").value,
-text:document.getElementById("reviewText").value
-};
+    const data={
+        name:document.getElementById("reviewName").value,
+        text:document.getElementById("reviewText").value
+    };
 
-await fetch(REVIEW_SCRIPT,{
-method:"POST",
-headers:{
-"Content-Type":"text/plain;charset=utf-8"
-},
-body:JSON.stringify(data)
-});
+    try{
 
-document.getElementById("reviewSuccess").style.display="block";
+        await fetch(REVIEW_SCRIPT,{
+            method:"POST",
+            headers:{
+                "Content-Type":"text/plain;charset=utf-8"
+            },
+            body:JSON.stringify(data)
+        });
 
-this.reset();
+        document.getElementById("reviewSuccess").style.display="block";
+
+        this.reset();
+
+    }catch(err){
+
+        alert("Greška pri slanju!");
+
+        console.log(err);
+
+    }
 
 });
 
