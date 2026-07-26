@@ -836,5 +836,33 @@ Hvala! Vaše iskustvo je uspešno poslato. ❤️
 </div>
 
 
+<script>
+
+const REVIEW_SCRIPT="YOUR_SCRIPT_URL";
+
+document.getElementById("reviewForm").addEventListener("submit",async function(e){
+
+e.preventDefault();
+
+const data={
+name:document.getElementById("reviewName").value,
+text:document.getElementById("reviewText").value
+};
+
+await fetch(REVIEW_SCRIPT,{
+method:"POST",
+headers:{
+"Content-Type":"text/plain;charset=utf-8"
+},
+body:JSON.stringify(data)
+});
+
+document.getElementById("reviewSuccess").style.display="block";
+
+this.reset();
+
+});
+
+</script>
 </body>
 </html>
