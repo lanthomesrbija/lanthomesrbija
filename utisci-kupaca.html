@@ -848,10 +848,34 @@ document.getElementById("reviewForm").addEventListener("submit", async function(
 
     e.preventDefault();
 
+    const imageFile = document.getElementById("reviewImage").files[0];
+
+    let imageData = "";
+    let imageName = "";
+    let imageType = "";
+
+    if(imageFile){
+
+        imageName = imageFile.name;
+        imageType = imageFile.type;
+
+        imageData = await new Promise((resolve)=>{
+            const reader = new FileReader();
+            reader.onload = () => resolve(reader.result);
+            reader.readAsDataURL(imageFile);
+        });
+
+    }
+
+
     const data={
-        name:document.getElementById("reviewName").value,
-        text:document.getElementById("reviewText").value
+        name: document.getElementById("reviewName").value,
+        text: document.getElementById("reviewText").value,
+        image: imageData,
+        imageName: imageName,
+        imageType: imageType
     };
+
 
     try{
 
@@ -863,9 +887,11 @@ document.getElementById("reviewForm").addEventListener("submit", async function(
             body:JSON.stringify(data)
         });
 
+
         document.getElementById("reviewSuccess").style.display="block";
 
         this.reset();
+
 
     }catch(err){
 
