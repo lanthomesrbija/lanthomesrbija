@@ -850,34 +850,100 @@ document.getElementById("reviewForm").addEventListener("submit", async function(
     e.preventDefault();
 
 
-    const data={
 
-    name: document.getElementById("reviewName").value,
+    const imageFile = document.getElementById("reviewImage").files[0];
 
-    text: document.getElementById("reviewText").value,
 
-    image: imageData,
+    let imageData = "";
+    let imageName = "";
+    let imageType = "";
 
-    imageName: imageName,
 
-    imageType: imageType
 
-};
+    // KÉP ELLENŐRZÉS ÉS BEOLVASÁS
+
+    if(imageFile){
+
+
+        if(imageFile.size > 5 * 1024 * 1024){
+
+            alert("A kép túl nagy! Maximum 5 MB lehet.");
+
+            return;
+
+        }
+
+
+
+        if(
+            imageFile.type !== "image/jpeg" &&
+            imageFile.type !== "image/png"
+        ){
+
+            alert("Csak JPG vagy PNG kép tölthető fel.");
+
+            return;
+
+        }
+
+
+
+        imageName = imageFile.name;
+
+        imageType = imageFile.type;
+
+
+
+        imageData = await new Promise((resolve)=>{
+
+            const reader = new FileReader();
+
+            reader.onload = () => resolve(reader.result);
+
+            reader.readAsDataURL(imageFile);
+
+        });
+
+
+    }
+
+
+
+
+    const data = {
+
+        name: document.getElementById("reviewName").value,
+
+        text: document.getElementById("reviewText").value,
+
+        image: imageData,
+
+        imageName: imageName,
+
+        imageType: imageType
+
+    };
+
+
+
+
 
     try{
 
 
         const response = await fetch(REVIEW_SCRIPT,{
 
-    method:"POST",
+            method:"POST",
 
-    headers:{
-        "Content-Type":"text/plain;charset=utf-8"
-    },
+            headers:{
+                "Content-Type":"text/plain;charset=utf-8"
+            },
 
-    body:JSON.stringify(data)
+            body:JSON.stringify(data)
 
-});
+        });
+
+
 
         const result = await response.text();
 
@@ -906,6 +972,8 @@ document.getElementById("reviewForm").addEventListener("submit", async function(
 
 
 });
+
+</script>
 
 </script>
 
