@@ -848,11 +848,35 @@ document.getElementById("reviewForm").addEventListener("submit", async function(
 
     e.preventDefault();
 
+    document.getElementById("reviewForm").addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
     const imageFile = document.getElementById("reviewImage").files[0];
+
+
+    if(imageFile){
+
+        if(imageFile.size > 5 * 1024 * 1024){
+            alert("A kép túl nagy! Maximum 5 MB lehet.");
+            return;
+        }
+
+        if(
+            imageFile.type !== "image/jpeg" &&
+            imageFile.type !== "image/png"
+        ){
+            alert("Csak JPG vagy PNG kép tölthető fel.");
+            return;
+        }
+
+    }
+
 
     let imageData = "";
     let imageName = "";
     let imageType = "";
+
 
     if(imageFile){
 
