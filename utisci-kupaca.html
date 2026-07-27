@@ -844,89 +844,112 @@ Hvala! Vaše iskustvo je uspešno poslato. ❤️
 
 const REVIEW_SCRIPT="https://script.google.com/macros/s/AKfycbwZ53b6K2iH0F7G2wOSg_iMx0z9oByaUw2IUYKVdmRaxOYhG-BFOgIZnsgSDweIAJrX/exec";
 
+
 document.getElementById("reviewForm").addEventListener("submit", async function(e){
 
     e.preventDefault();
 
+
     const imageFile = document.getElementById("reviewImage").files[0];
 
+
+    // KÉP ELLENŐRZÉS
 
     if(imageFile){
 
         if(imageFile.size > 5 * 1024 * 1024){
+
             alert("A kép túl nagy! Maximum 5 MB lehet.");
+
             return;
+
         }
+
 
         if(
             imageFile.type !== "image/jpeg" &&
             imageFile.type !== "image/png"
         ){
+
             alert("Csak JPG vagy PNG kép tölthető fel.");
+
             return;
+
         }
 
     }
 
 
-    let imageData = "";
-    let imageName = "";
-    let imageType = "";
-
-
-    if(imageFile){
-
-        imageName = imageFile.name;
-        imageType = imageFile.type;
-
-        imageData = await new Promise((resolve)=>{
-            const reader = new FileReader();
-            reader.onload = () => resolve(reader.result);
-            reader.readAsDataURL(imageFile);
-        });
-
-    }
-
-
-    const data={
-        name: document.getElementById("reviewName").value,
-        text: document.getElementById("reviewText").value,
-        image: imageData,
-        imageName: imageName,
-        imageType: imageType
-    };
-
 
     try{
 
-        const response = await fetch(REVIEW_SCRIPT,{
-    method:"POST",
-    headers:{
-        "Content-Type":"text/plain;charset=utf-8"
-    },
-    body:JSON.stringify(data)
-});
 
-const result = await response.text();
+        const formData = new FormData();
 
-console.log(result);
+
+        formData.append(
+            "name",
+            document.getElementById("reviewName").value
+        );
+
+
+        formData.append(
+            "text",
+            document.getElementById("reviewText").value
+        );
+
+
+
+        if(imageFile){
+
+            formData.append(
+                "image",
+                imageFile
+            );
+
+        }
+
+
+
+        const response = await fetch(REVIEW_SCRIPT, {
+
+            method:"POST",
+
+            body:formData
+
+        });
+
+
+
+        const result = await response.text();
+
+
+        console.log(result);
+
 
 
         document.getElementById("reviewSuccess").style.display="block";
 
+
         this.reset();
+
 
 
     }catch(err){
 
+
         alert("Greška pri slanju!");
+
 
         console.log(err);
 
+
     }
+
 
 });
 
+</script>
 </script>
 </body>
 </html>
