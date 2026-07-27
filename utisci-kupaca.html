@@ -850,75 +850,29 @@ document.getElementById("reviewForm").addEventListener("submit", async function(
     e.preventDefault();
 
 
-    const imageFile = document.getElementById("reviewImage").files[0];
+    const data = {
 
+        name: document.getElementById("reviewName").value,
 
-    // KÉP ELLENŐRZÉS
+        text: document.getElementById("reviewText").value
 
-    if(imageFile){
-
-        if(imageFile.size > 5 * 1024 * 1024){
-
-            alert("A kép túl nagy! Maximum 5 MB lehet.");
-
-            return;
-
-        }
-
-
-        if(
-            imageFile.type !== "image/jpeg" &&
-            imageFile.type !== "image/png"
-        ){
-
-            alert("Csak JPG vagy PNG kép tölthető fel.");
-
-            return;
-
-        }
-
-    }
-
+    };
 
 
     try{
-
-
-        const formData = new FormData();
-
-
-        formData.append(
-            "name",
-            document.getElementById("reviewName").value
-        );
-
-
-        formData.append(
-            "text",
-            document.getElementById("reviewText").value
-        );
-
-
-
-        if(imageFile){
-
-            formData.append(
-                "image",
-                imageFile
-            );
-
-        }
-
 
 
         const response = await fetch(REVIEW_SCRIPT, {
 
             method:"POST",
 
-            body:formData
+            headers:{
+                "Content-Type":"text/plain;charset=utf-8"
+            },
+
+            body:JSON.stringify(data)
 
         });
-
 
 
         const result = await response.text();
@@ -950,6 +904,6 @@ document.getElementById("reviewForm").addEventListener("submit", async function(
 });
 
 </script>
-</script>
+
 </body>
 </html>
