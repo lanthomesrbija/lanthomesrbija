@@ -823,21 +823,24 @@ Pošalji iskustvo
 
 </form>
 
+
 <p id="reviewSuccess" style="display:none;text-align:center;color:green;font-weight:bold;margin-top:20px;">
 Hvala! Vaše iskustvo je uspešno poslato. ❤️
 </p>
-    
+
+
 <div style="text-align:center; margin-top:40px;">
     <a href="index.html#checkout" class="back-btn">
         Povratak na poručivanje 👆🏿
     </a>
 </div>
-</div>
+
 
 
 <script>
 
 const REVIEW_SCRIPT="https://script.google.com/macros/s/AKfycbwZ53b6K2iH0F7G2wOSg_iMx0z9oByaUw2IUYKVdmRaxOYhG-BFOgIZnsgSDweIAJrX/exec";
+
 
 
 document.getElementById("reviewForm").addEventListener("submit", async function(e){
@@ -846,80 +849,13 @@ document.getElementById("reviewForm").addEventListener("submit", async function(
 
 
 
-    const imageFile = document.getElementById("reviewImage").files[0];
-
-
-    let imageData = "";
-    let imageName = "";
-    let imageType = "";
-
-
-
-    // KÉP ELLENŐRZÉS ÉS BEOLVASÁS
-
-    if(imageFile){
-
-
-        if(imageFile.size > 5 * 1024 * 1024){
-
-            alert("A kép túl nagy! Maximum 5 MB lehet.");
-
-            return;
-
-        }
-
-
-
-        if(
-            imageFile.type !== "image/jpeg" &&
-            imageFile.type !== "image/png"
-        ){
-
-            alert("Csak JPG vagy PNG kép tölthető fel.");
-
-            return;
-
-        }
-
-
-
-        imageName = imageFile.name;
-
-        imageType = imageFile.type;
-
-
-
-        imageData = await new Promise((resolve)=>{
-
-            const reader = new FileReader();
-
-            reader.onload = () => resolve(reader.result);
-
-            reader.readAsDataURL(imageFile);
-
-        });
-
-
-    }
-
-
-
-
     const data = {
 
         name: document.getElementById("reviewName").value,
 
-        text: document.getElementById("reviewText").value,
-
-        image: imageData,
-
-        imageName: imageName,
-
-        imageType: imageType
+        text: document.getElementById("reviewText").value
 
     };
-
-
 
 
 
@@ -959,7 +895,6 @@ document.getElementById("reviewForm").addEventListener("submit", async function(
 
         alert("Greška pri slanju!");
 
-
         console.log(err);
 
 
@@ -967,8 +902,6 @@ document.getElementById("reviewForm").addEventListener("submit", async function(
 
 
 });
-
-</script>
 
 </script>
 
