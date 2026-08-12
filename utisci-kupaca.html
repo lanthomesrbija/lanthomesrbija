@@ -847,11 +847,15 @@ Hvala! Vaše iskustvo je uspešno poslato. ❤️
 </p>
 
 
-<div style="text-align:center; margin-top:40px;">
-    <a href="index.html#checkout" class="back-btn">
-        Povratak na 👆poručivanje 
-    </a>
+<div style="text-align:center; margin-top:40px;"> 
+    <a href="#" id="backToProduct" class="back-btn"> 
+        Povratak na 👆poručivanje  
+    </a> 
 </div>
+
+<script>
+document.getElementById("backToProduct").href = document.referrer;
+</script>
 
 
 
