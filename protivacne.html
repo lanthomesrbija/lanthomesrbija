@@ -844,8 +844,108 @@ CHECKOUT FULL SYSTEM (FINAL FIX)
 
 <!-- NOTE -->
 <div class="box">
-  <div class="label">📝 Napomena</div>
-  <textarea name="note" placeholder="Dodatne informacije (opciono)"></textarea>
+    <div class="label">Uštedite više kada kupujete više! 💰</div>
+    <div class="label">Izaberite paket koji vam najviše odgovara 👇</div>
+
+    <!-- 1x -->
+    <div class="label" style="display:flex;align-items:center;gap:5px;">
+
+        <input type="radio" name="product" value="1"
+               checked
+               style="width:14px;height:14px;margin:0;">
+
+        <span>1x</span>
+
+        <div style="display:flex;flex-direction:column;align-items:center;">
+
+            <img src="images/acne3.webp"
+                 style="width:80px;height:80px;object-fit:contain;">
+
+            <span style="margin-top:4px;text-align:center;">
+                Ukupno: <strong>2.299 dinara</strong>
+            </span>
+
+        </div>
+
+    </div>
+
+    <!-- ELVÁLASZTÓ -->
+    <div style="width:100%;height:1px;background:#e5e5e5;margin:10px 0;box-sizing:border-box;"></div>
+
+
+    <!-- 2x -->
+    <div class="label" style="display:flex;align-items:center;gap:5px;">
+
+        <input type="radio" name="product" value="2"
+               style="width:14px;height:14px;margin:0;">
+
+        <span>2x</span>
+
+        <div style="display:flex;flex-direction:column;align-items:center;">
+
+            <div style="display:flex;align-items:center;gap:5px;">
+
+                <img src="images/acne3.webp"
+                     style="width:80px;height:80px;object-fit:contain;">
+
+                <span>+</span>
+
+                <img src="images/acne3.webp"
+                     style="width:80px;height:80px;object-fit:contain;">
+
+            </div>
+
+            <span style="margin-top:4px;text-align:center;">
+                Umesto <del>4.598 dinara</del>, sada samo <strong>3.999 dinara!</strong>
+            </span>
+
+        </div>
+
+    </div>
+
+    <!-- ELVÁLASZTÓ -->
+    <div style="width:100%;height:1px;background:#e5e5e5;margin:10px 0;box-sizing:border-box;"></div>
+
+
+    <!-- 3x -->
+    <div class="label" style="display:flex;align-items:center;gap:5px;">
+
+        <input type="radio" name="product" value="3"
+               style="width:14px;height:14px;margin:0;">
+
+        <span>3x</span>
+
+        <div style="display:flex;flex-direction:column;align-items:center;">
+
+            <div style="display:flex;align-items:center;gap:5px;">
+
+                <img src="images/acne3.webp"
+                     style="width:80px;height:80px;object-fit:contain;">
+
+                <span>+</span>
+
+                <img src="images/acne3.webp"
+                     style="width:80px;height:80px;object-fit:contain;">
+
+                <span>+</span>
+
+                <img src="images/acne3.webp"
+                     style="width:80px;height:80px;object-fit:contain;">
+
+            </div>
+
+            <span style="margin-top:4px;text-align:center;">
+                Umesto <del>6.897 dinara</del>, sada samo <strong>5.499 dinara!</strong>
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+    
+
+  <textarea name="note" placeholder="Poruka dostavljaču (opciono)"></textarea>
 </div>
 
 </form>
@@ -919,6 +1019,7 @@ input,textarea{
   padding:10px;
   border-radius:8px;
   border:1px solid #ccc;
+  box-sizing:border-box;
 }
 </style>
 
@@ -938,7 +1039,8 @@ function checkForm() {
     document.querySelector('[name="address"]').value.trim() &&
     document.querySelector('[name="city"]').value.trim() &&
     document.querySelector('[name="zip"]').value.trim() &&
-    document.querySelector('[name="phone"]').value.trim();
+    document.querySelector('[name="phone"]').value.trim() &&
+    document.querySelector('input[name="product"]:checked');
 
   // CARD BUTTON
   btn.disabled = !ok;
@@ -1039,7 +1141,14 @@ codBtn.addEventListener("click", async () => {
     zip: document.querySelector('[name="zip"]').value.trim(),
     phone: document.querySelector('[name="phone"]').value.trim(),
     email: document.querySelector('[name="email"]').value.trim(),
-    note: document.querySelector('[name="note"]').value.trim(),
+
+      note:
+      "Poručeno: " +
+      document.querySelector('input[name="product"]:checked').value +
+      "x Lanthome Acne Control Gel" +
+      (document.querySelector('[name="note"]').value.trim()
+        ? "\nPoruka dostavljaču: " + document.querySelector('[name="note"]').value.trim()
+        : ""),
 
     order_type: "COD"
 };
