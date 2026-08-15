@@ -1038,7 +1038,8 @@ function checkForm() {
     document.querySelector('[name="address"]').value.trim() &&
     document.querySelector('[name="city"]').value.trim() &&
     document.querySelector('[name="zip"]').value.trim() &&
-    document.querySelector('[name="phone"]').value.trim();
+    document.querySelector('[name="phone"]').value.trim() &&
+    document.querySelector('input[name="product"]:checked');
 
   // CARD BUTTON
   btn.disabled = !ok;
