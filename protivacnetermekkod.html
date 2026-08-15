@@ -1142,6 +1142,14 @@ codBtn.addEventListener("click", async () => {
     email: document.querySelector('[name="email"]').value.trim(),
     note: document.querySelector('[name="note"]').value.trim(),
 
+      note:
+      "Poručeno: " +
+      document.querySelector('input[name="product"]:checked').value +
+      "x Lanthome Acne Control Gel" +
+      (document.querySelector('[name="note"]').value.trim()
+        ? "\nPoruka dostavljaču: " + document.querySelector('[name="note"]').value.trim()
+        : ""),
+
     order_type: "COD"
 };
 
