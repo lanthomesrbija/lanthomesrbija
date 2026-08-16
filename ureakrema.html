@@ -1085,7 +1085,7 @@ btn.addEventListener("click", async () => {
   btn.innerText = "Slanje...";
 
   const data = {
-    product_name: "Lanthome Acne Control Gel",
+    product_name: "Lanthome Urea Krema",
 
     name: document.querySelector('[name="name"]').value.trim(),
     address: document.querySelector('[name="address"]').value.trim(),
@@ -1107,7 +1107,7 @@ btn.addEventListener("click", async () => {
     });
 
     fbq('track', 'InitiateCheckout', {
-        content_name: 'Lanthome Acne Control Gel'
+        content_name: 'Lanthome Urea Krema'
     });
 
     setTimeout(() => {
@@ -1137,7 +1137,7 @@ codBtn.addEventListener("click", async () => {
   codBtn.innerText = "Slanje...";
 
   const data = {
-    product_name: "Lanthome Acne Control Gel",
+    product_name: "Lanthome Urea Krema",
 
     name: document.querySelector('[name="name"]').value.trim(),
     address: document.querySelector('[name="address"]').value.trim(),
@@ -1149,7 +1149,7 @@ codBtn.addEventListener("click", async () => {
       note:
       "Poručeno: " +
       document.querySelector('input[name="product"]:checked').value +
-      "x Lanthome Acne Control Gel" +
+      "x Lanthome Urea Krema" +
       (document.querySelector('[name="note"]').value.trim()
         ? "\nPoruka dostavljaču: " + document.querySelector('[name="note"]').value.trim()
         : ""),
