@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Utisci kupaca – vi ste poslali</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background:#e8b8c5;
+    margin:0;
+    padding:30px 15px;
+    color:#222;
+}
+
+.container {
+    max-width:700px;
+    margin:auto;
+}
+
+h1 {
+    text-align:center;
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.subtitle {
+    text-align:center;
+    font-size:18px;
+    margin-bottom:30px;
+    color:#555;
+}
+
+
+/* ===== VISSZA GOMB ===== */
+
+.back-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 25px;
+    z-index: 9999;
+
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background: #db51a2;
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+
+    border-radius: 12px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+
+    transition: background 0.2s ease;
+}
+
+.back-btn:hover {
+    background: #c84391;
+}
+
+
+/* ===== KÜLDÉS GOMB ===== */
+
+.send-btn {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background: #674ea7;
+    color: white;
+
+    border: none;
+    border-radius: 12px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* ===== VÁSÁRLÓI VISSZAJELZÉS ===== */
+
+.review-box {
+    background:#fff;
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.review-box img {
+    width:100%;
+    border-radius:12px;
+    display:block;
+    margin-bottom:15px;
+}
+
+.review-text {
+    font-size:18px;
+    line-height:1.6;
+}
+
+
+/* ===== VÉLEMÉNY KÜLDŐ FORM ===== */
+
+#reviewForm {
+    margin-top:40px;
+}
+
+#reviewForm label {
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+#reviewForm input,
+#reviewForm textarea {
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    box-sizing:border-box;
+    font-size:16px;
+}
+
+#reviewForm button {
+    margin-top:20px;
+    cursor:pointer;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+<!-- ===== OLDAL CÍME ===== -->
+
+<h1>
+🌸 Utisci kupaca – vi ste poslali 🌸
+</h1>
+
+<p class="subtitle">
+-Prava iskustva naših kupaca-
+</p>
+
+
+<!-- =================================================
+     EGYETLEN VÁSÁRLÓI VISSZAJELZÉS
+     
+     ÚJ TERMÉKNÉL CSAK EZT A RÉSZT KELL ÁTÍRNI:
+     
+     1. kép
+     2. szöveg
+================================================= -->
+
+<div class="review-box">
+
+    <img src="images/ChatGPT Image 2026. aug. 15. 08_08_12 (1).png">
+
+    <p class="review-text">
+
+    **Petar**
+
+Milica
+
+Odlična za suvu kožu!
+
+
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+    <!-- =================================================
+     EGYETLEN VÁSÁRLÓI VISSZAJELZÉS
+     
+     ÚJ TERMÉKNÉL CSAK EZT A RÉSZT KELL ÁTÍRNI:
+     
+     1. kép
+     2. szöveg
+================================================= -->
+
+<div class="review-box">
+
+    <img src="images/ChatGPT Image 2026. aug. 15. 08_08_18 (1).png">
+
+    <p class="review-text">
+
+Marko
+
+Koža mi je mnogo mekša. Zadovoljan sam.
+
+
+
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+     <!-- =================================================
+     EGYETLEN VÁSÁRLÓI VISSZAJELZÉS
+     
+     ÚJ TERMÉKNÉL CSAK EZT A RÉSZT KELL ÁTÍRNI:
+     
+     1. kép
+     2. szöveg
+================================================= -->
+
+<div class="review-box">
+
+    <img src="">
+
+    <p class="review-text">
+
+Jelena
+
+Konačno krema koja mi odgovara. Koža mi je ranije često bila suva i zategnuta, posebno posle umivanja. Sada je mnogo mekša.
+
+
+
+
+
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+
+<div class="review-box">
+
+    <img src="">
+
+    <p class="review-text">
+Nikola
+
+Baš dobra krema.
+
+
+
+
+
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+
+<div class="review-box">
+
+    <img src="">
+
+    <p class="review-text">
+
+Marija
+
+Prezodovoljna sam! Brzo se upija i lepo hidrira kožu. Koristim je svakog dana i za sada sam baš zadovoljna.
+
+
+
+
+
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+
+<div class="review-box">
+
+    <img src="">
+
+    <p class="review-text">
+
+Aleksandar
+
+Meni je pomogla kod suve kože.
+
+
+
+
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+
+<div class="review-box">
+
+    <img src="">
+
+    <p class="review-text">
+
+Ana
+
+Koža je mekša već posle nekoliko korišćenja.
+
+
+
+
+
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+    <!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+
+<div class="review-box">
+
+    <img src="">
+
+    <p class="review-text">
+
+Stefan
+
+Nisam očekivao mnogo od ove kreme, ali sam se prijatno iznenadio. Koža mi je bila prilično suva, a sada je mnogo prijatnija na dodir.
+
+
+
+
+
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+  <!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+
+<div class="review-box">
+
+    <img src="">
+
+    <p class="review-text">
+
+Sofija
+
+Odlična!
+
+
+
+
+
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+  <!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+
+<div class="review-box">
+
+    <img src="">
+
+    <p class="review-text">
+
+Petar
+
+Koristim je već neko vreme i stvarno sam zadovoljan. Lako se nanosi, brzo upija i ne ostavlja mastan osećaj. Koža mi je sada mnogo mekša.
+
+
+
+
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+
+<hr style="margin:50px 0;">
+
+<h2 style="text-align:center;">
+Pošaljite svoje iskustvo
+</h2>
+
+
+<form id="reviewForm">
+
+    <div class="box">
+
+        <label>Ime</label>
+
+        <input 
+            type="text" 
+            id="reviewName" 
+            required
+        >
+
+    </div>
+
+
+    <div class="box">
+
+        <label>Vaše iskustvo</label>
+
+        <textarea 
+            id="reviewText" 
+            rows="6" 
+            required
+        ></textarea>
+
+    </div>
+
+
+    <button type="submit" class="send-btn">
+        Pošalji iskustvo
+    </button>
+
+</form>
+
+
+<p 
+    id="reviewSuccess" 
+    style="display:none;text-align:center;color:green;font-weight:bold;margin-top:20px;"
+>
+    Hvala! Vaše iskustvo je uspešno poslato. ❤️
+</p>
+
+
+<!-- ===== VISSZA A TERMÉKHEZ ===== -->
+
+<div style="text-align:center; margin-top:40px;">
+
+    <a 
+        href="#" 
+        id="backToProduct" 
+        class="back-btn"
+    >
+        Povratak na 👆poručivanje
+    </a>
+
+</div>
+
+
+</div>
+
+
+<!-- ===== VISSZA GOMB SCRIPT ===== -->
+
+<script>
+
+document.getElementById("backToProduct").href = document.referrer;
+
+</script>
+
+
+<!-- ===== GOOGLE SHEETS KÜLDÉS ===== -->
+
+<script>
+
+const REVIEW_SCRIPT="https://script.google.com/macros/s/AKfycbwZ53b6K2iH0F7G2wOSg_iMx0z9oByaUw2IUYKVdmRaxOYhG-BFOgIZnsgSDweIAJrX/exec";
+
+
+document.getElementById("reviewForm").addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+
+    const data = {
+
+        name: document.getElementById("reviewName").value,
+
+        text: document.getElementById("reviewText").value
+
+    };
+
+
+    try{
+
+        const response = await fetch(REVIEW_SCRIPT,{
+
+            method:"POST",
+
+            headers:{
+                "Content-Type":"text/plain;charset=utf-8"
+            },
+
+            body:JSON.stringify(data)
+
+        });
+
+
+        const result = await response.text();
+
+        console.log(result);
+
+
+        document.getElementById("reviewSuccess").style.display="block";
+
+        this.reset();
+
+
+    }catch(err){
+
+        alert("Greška pri slanju!");
+
+        console.log(err);
+
+    }
+
+});
+
+</script>
+
+
+</body>
+</html>
