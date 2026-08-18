@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Utisci kupaca – vi ste poslali</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background:#e8b8c5;
+    margin:0;
+    padding:30px 15px;
+    color:#222;
+}
+
+.container {
+    max-width:700px;
+    margin:auto;
+}
+
+h1 {
+    text-align:center;
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.subtitle {
+    text-align:center;
+    font-size:18px;
+    margin-bottom:30px;
+    color:#555;
+}
+
+
+/* ===== VISSZA GOMB ===== */
+
+.back-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 25px;
+    z-index: 9999;
+
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background: #db51a2;
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+
+    border-radius: 12px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+
+    transition: background 0.2s ease;
+}
+
+.back-btn:hover {
+    background: #c84391;
+}
+
+
+/* ===== KÜLDÉS GOMB ===== */
+
+.send-btn {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background: #674ea7;
+    color: white;
+
+    border: none;
+    border-radius: 12px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* ===== VÁSÁRLÓI VISSZAJELZÉS ===== */
+
+.review-box {
+    background:#fff;
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.review-box img {
+    width:100%;
+    border-radius:12px;
+    display:block;
+    margin-bottom:15px;
+}
+
+.review-text {
+    font-size:18px;
+    line-height:1.6;
+}
+
+
+/* ===== VÉLEMÉNY KÜLDŐ FORM ===== */
+
+#reviewForm {
+    margin-top:40px;
+}
+
+#reviewForm label {
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+#reviewForm input,
+#reviewForm textarea {
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    box-sizing:border-box;
+    font-size:16px;
+}
+
+#reviewForm button {
+    margin-top:20px;
+    cursor:pointer;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+<!-- ===== OLDAL CÍME ===== -->
+
+<h1>
+🌸 Utisci kupaca – vi ste poslali 🌸
+</h1>
+
+<p class="subtitle">
+-Prava iskustva naših kupaca-
+</p>
+
+
+<!-- =================================================
+     EGYETLEN VÁSÁRLÓI VISSZAJELZÉS
+     
+     ÚJ TERMÉKNÉL CSAK EZT A RÉSZT KELL ÁTÍRNI:
+     
+     1. kép
+     2. szöveg
+================================================= -->
+
+<div class="review-box">
+
+    <img src="">
+
+    <p class="review-text">
+
+    Sara,
+
+Baš lep proizvod. Koža mi izgleda svežije, mekša je i deluje negovanije. Najviše volim da ga stavim uveče pre kreme. 😊
+
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+    <!-- =================================================
+     EGYETLEN VÁSÁRLÓI VISSZAJELZÉS
+     
+     ÚJ TERMÉKNÉL CSAK EZT A RÉSZT KELL ÁTÍRNI:
+     
+     1. kép
+     2. szöveg
+================================================= -->
+
+<div class="review-box">
+
+    <img src="">
+
+    <p class="review-text">
+
+Jelena,
+
+Odličan serum! Koristim ga već nekoliko nedelja i koža mi je mnogo mekša i lepša. Posebno mi se dopada što se brzo upija i ne ostavlja masan osećaj.
+
+
+
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+     <!-- =================================================
+     EGYETLEN VÁSÁRLÓI VISSZAJELZÉS
+     
+     ÚJ TERMÉKNÉL CSAK EZT A RÉSZT KELL ÁTÍRNI:
+     
+     1. kép
+     2. szöveg
+================================================= -->
+
+<div class="review-box">
+
+    <img src="">
+
+    <p class="review-text">
+
+Milica,
+
+Iskreno, nisam očekivala neku veliku razliku, ali sam se prijatno iznenadila. Posle redovnog korišćenja koža izgleda svežije, zategnutije i nekako zdravije. Definitivno ću nastaviti da ga koristim.
+
+
+
+
+
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+
+<div class="review-box">
+
+    <img src="">
+
+    <p class="review-text">
+
+      Marija,
+
+Veoma sam zadovoljna serumom. Lako se nanosi, prijatan je na koži i lepo se uklapa u moju večernju rutinu. Posle nekog vremena sam primetila da mi je koža mnogo glađa.
+
+
+
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+
+<div class="review-box">
+
+    <img src="">
+
+    <p class="review-text">
+
+Ana
+
+Super proizvod, baš sam zadovoljna! ❤️
+
+
+
+
+
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+
+<div class="review-box">
+
+    <img src="">
+
+    <p class="review-text">
+
+Ivana,
+
+Koristim ga uveče i za sada sam prezadovoljna. Koža mi je mekana, glatka i mnogo lepše izgleda ujutru. Dopada mi se i tekstura seruma, nije težak i brzo se upija.
+
+
+
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+
+<div class="review-box">
+
+    <img src="">
+
+    <p class="review-text">
+
+Sofija,
+
+Ovo je prvi retinol serum koji sam probala i zaista mi se dopada. U početku sam bila malo oprezna, ali uz postepeno uvođenje u rutinu nisam imala problema. Koža mi sada izgleda mnogo negovanije.
+
+
+
+
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+    <!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+
+<div class="review-box">
+
+    <img src="">
+
+    <p class="review-text">
+
+Dragana,
+
+Kupila sam ga prvenstveno zbog izgleda sitnih linija i moram reći da sam zadovoljna rezultatima. Koža mi deluje zategnutije i hidriranije, a ten je lepši i ujednačeniji. Za sada ostaje deo moje rutine. 😊
+
+
+
+
+
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+  <!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+
+<div class="review-box">
+
+    <img src="">
+
+    <p class="review-text">
+
+Nikolina,
+
+Prezadovoljna! Nisam očekivala da će mi se toliko dopasti. Serum je lagan, lepo se razmazuje i ujutru mi je koža baš mekana na dodir. Posle nekoliko nedelja korišćenja definitivno vidim razliku.
+
+
+
+
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+  <!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+
+<div class="review-box">
+
+    <img src="">
+
+    <p class="review-text">
+
+Teodora,
+
+Odličan serum za večernju negu. Koristim ga nekoliko puta nedeljno i koža mi je mnogo glatkija nego ranije. Sviđa mi se što mi ne ostavlja težak osećaj na licu. Sigurno ću naručiti ponovo.
+
+
+
+
+
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+  <!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+
+<div class="review-box">
+
+    <img src="">
+
+    <p class="review-text">
+
+Vesna,
+
+Veoma sam zadovoljna serumom. Lagan je, prijatan za korišćenje i lepo se uklopio u moju večernju rutinu. Koža mi je sada glatka i mekana. ❤️
+
+
+
+
+
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+  <!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+
+<div class="review-box">
+
+    <img src="">
+
+    <p class="review-text">
+
+Kristina,
+
+Odličan proizvod! Posle nekoliko nedelja korišćenja koža mi izgleda mnogo svežije i negovanije. Definitivno preporučujem.
+
+
+
+
+
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+  <!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+
+<div class="review-box">
+
+    <img src="">
+
+    <p class="review-text">
+
+Tamara,
+
+Koristim ga već neko vreme i baš sam zadovoljna. Koža mi je mekša i prijatnija na dodir, a serum se lepo upija.
+
+
+
+
+
+    </p>
+
+</div>
+
+
+<!-- =================================================
+     VÉLEMÉNY KÜLDÉSE
+================================================= -->
+
+<hr style="margin:50px 0;">
+
+<h2 style="text-align:center;">
+Pošaljite svoje iskustvo
+</h2>
+
+
+<form id="reviewForm">
+
+    <div class="box">
+
+        <label>Ime</label>
+
+        <input 
+            type="text" 
+            id="reviewName" 
+            required
+        >
+
+    </div>
+
+
+    <div class="box">
+
+        <label>Vaše iskustvo</label>
+
+        <textarea 
+            id="reviewText" 
+            rows="6" 
+            required
+        ></textarea>
+
+    </div>
+
+
+    <button type="submit" class="send-btn">
+        Pošalji iskustvo
+    </button>
+
+</form>
+
+
+<p 
+    id="reviewSuccess" 
+    style="display:none;text-align:center;color:green;font-weight:bold;margin-top:20px;"
+>
+    Hvala! Vaše iskustvo je uspešno poslato. ❤️
+</p>
+
+
+<!-- ===== VISSZA A TERMÉKHEZ ===== -->
+
+<div style="text-align:center; margin-top:40px;">
+
+    <a 
+        href="#" 
+        id="backToProduct" 
+        class="back-btn"
+    >
+        Povratak na 👆poručivanje
+    </a>
+
+</div>
+
+
+</div>
+
+
+<!-- ===== VISSZA GOMB SCRIPT ===== -->
+
+<script>
+
+document.getElementById("backToProduct").href = document.referrer;
+
+</script>
+
+
+<!-- ===== GOOGLE SHEETS KÜLDÉS ===== -->
+
+<script>
+
+const REVIEW_SCRIPT="https://script.google.com/macros/s/AKfycbwZ53b6K2iH0F7G2wOSg_iMx0z9oByaUw2IUYKVdmRaxOYhG-BFOgIZnsgSDweIAJrX/exec";
+
+
+document.getElementById("reviewForm").addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+
+    const data = {
+
+        name: document.getElementById("reviewName").value,
+
+        text: document.getElementById("reviewText").value
+
+    };
+
+
+    try{
+
+        const response = await fetch(REVIEW_SCRIPT,{
+
+            method:"POST",
+
+            headers:{
+                "Content-Type":"text/plain;charset=utf-8"
+            },
+
+            body:JSON.stringify(data)
+
+        });
+
+
+        const result = await response.text();
+
+        console.log(result);
+
+
+        document.getElementById("reviewSuccess").style.display="block";
+
+        this.reset();
+
+
+    }catch(err){
+
+        alert("Greška pri slanju!");
+
+        console.log(err);
+
+    }
+
+});
+
+</script>
+
+
+</body>
+</html>
