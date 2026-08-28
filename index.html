@@ -693,11 +693,39 @@ RESPONSIVE
     <span class="badge">⭐⭐⭐⭐☆ 4.8/5 Recenzije</span>
 </div>
 
-        <div class="qty-box">
-            <button onclick="changeQty(-1)">-</button>
-            <input id="qty" value="1">
-            <button onclick="changeQty(1)">+</button>
-        </div>
+        <div class="countdown-box">
+    <span>🔥 PONUDA ISTIČE ZA:</span>
+    <span id="countdown">08:00:00</span>
+</div>
+
+<script>
+function startCountdown() {
+    let endTime = Date.now() + 8 * 60 * 60 * 1000;
+
+    function updateCountdown() {
+        let remaining = endTime - Date.now();
+
+        if (remaining <= 0) {
+            endTime = Date.now() + 8 * 60 * 60 * 1000;
+            remaining = endTime - Date.now();
+        }
+
+        let hours = Math.floor(remaining / (1000 * 60 * 60));
+        let minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").textContent =
+            String(hours).padStart(2, '0') + ":" +
+            String(minutes).padStart(2, '0') + ":" +
+            String(seconds).padStart(2, '0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+}
+
+startCountdown();
+</script>
 
         <button class="buy-btn" onclick="scrollToCheckout()">Poručujem</button>
 
