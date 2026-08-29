@@ -2082,44 +2082,6 @@ function toggleMenu(){
        👆
 
 </a>
-<script>
-    const REVIEW_SCRIPT="https://script.google.com/macros/s/AKfycbwZ53b6K2iH0F7G2wOSg_iMx0z9oByaUw2IUYKVdmRaxOYhG-BFOgIZnsgSDweIAJrX/exec";
-
-document.getElementById("reviewForm").addEventListener("submit", async function(e){
-
-    e.preventDefault();
-
-    const data = {
-        name: document.getElementById("reviewName").value,
-        text: document.getElementById("reviewText").value
-    };
-
-    try {
-
-        const response = await fetch(REVIEW_SCRIPT, {
-            method:"POST",
-            headers:{
-                "Content-Type":"text/plain;charset=utf-8"
-            },
-            body:JSON.stringify(data)
-        });
-
-        const result = await response.text();
-
-        console.log(result);
-
-        document.getElementById("reviewSuccess").style.display="block";
-
-        this.reset();
-
-    } catch(err) {
-
-        alert("Greška pri slanju!");
-        console.log(err);
-
-    }
-
-});
 
 </body>
 </html>
