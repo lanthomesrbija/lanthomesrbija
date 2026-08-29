@@ -351,33 +351,56 @@ lebegő gomb
 }
 /* utisci kupca */
     .review-box {
-    background:#fff;
-    border-radius:15px;
-    padding:20px;
-    margin-bottom:25px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 0 0 25px 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 700px;
+    overflow: hidden;
 }
 
 .review-box img {
-    width:100%;
-    border-radius:12px;
-    display:block;
-    margin-bottom:15px;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 0 0 15px 0;
+    box-sizing: border-box;
 }
 
 .review-text {
-    font-size:18px;
-    line-height:1.6;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+#reviewForm {
+    width: 100%;
+    max-width: 700px;
+    box-sizing: border-box;
 }
 
 #reviewForm input,
 #reviewForm textarea {
-    font-family:Arial, sans-serif;
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
 }
 
 #reviewForm button {
-    margin-top:5px;
-    cursor:pointer;
+    margin-top: 5px;
+    cursor: pointer;
 }
     
 
