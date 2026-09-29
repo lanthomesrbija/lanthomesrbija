@@ -183,34 +183,7 @@ SMALL TEXT
     font-size: 13px;
     color: #666;
 }
-    /* =========================
-GIFT BAR (GOLD)
-========================= */
-
-.gift-bar{
-    background: linear-gradient(90deg, #b8860b, #ffd700, #b8860b);
-    color: #111;
-    text-align: center;
-    padding: 10px 15px;
-    font-weight: 600;
-    font-size: 14px;
-    position: relative;
-}
-
-.gift-bar-text{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    transition: opacity 0.6s ease;
-    opacity: 0;
-}
-
-.gift-bar-text.active{
-    opacity: 1;
-    position: relative;
-}
-
+    
 /* =========================
 lebegő gomb
 ========================= */
@@ -221,13 +194,13 @@ lebegő gomb
     z-index: 9999;
 
     background: linear-gradient(90deg, #FF6B35, #FF8A5B, #FF6B35);
-    color: #111;
+    color: #ffffff;
     text-decoration: none;
 
-    padding: 10px 15px;
-    border-radius: 9px;
+    padding: 20px 30px;
+    border-radius: 18px;
 
-    font-size: 12px;
+    font-size: 26px;
     font-weight: 700;
     line-height: 1.5;
     text-align: center;
@@ -250,9 +223,9 @@ lebegő gomb
         right: 15px;
         bottom: 20px;
 
-        padding: 4px 6px;
-        font-size: 9px;
-        border-radius: 9px;
+        padding: 10px 14px;
+        font-size: 18px;
+        border-radius: 20px;
     }
 
 }
@@ -691,7 +664,7 @@ function startCountdown() {
 startCountdown();
 </script>
 
-        <button class="buy-btn" onclick="scrollToCheckout()">NARUČIM</button>
+        <button class="buy-btn" onclick="scrollToCheckout()">🛒 NARUČIM</button>
 
         <!-- ACCORDION -->
         <div class="accordion">
@@ -1098,17 +1071,6 @@ function scrollToCheckout(){
  TOP BAR
 ========================= -->
 
-<div class="gift-bar">
-  <div class="gift-bar-text" id="giftText1">
-    🔥 -20% Popust
-  </div>
-
-  <div class="gift-bar-text" id="giftText2">
-    🚚Besplatna dostava širom Srbije🚚
-  </div>
-</div>
-
-
 <!-- =========================
 CHECKOUT FULL SYSTEM (FINAL FIX)
 ========================= -->
@@ -1166,8 +1128,8 @@ CHECKOUT FULL SYSTEM (FINAL FIX)
 
 <!-- NOTE -->
 <div class="box">
-    <div class="label">Uštedite više kada kupujete više! 💰</div>
-    <div class="label">👇 Izaberite paket koji vam najviše odgovara </div>
+    <div class="label">Uštedite više!💰</div>
+    <div class="label">Izaberite paket👇 </div>
 
     <!-- 1x -->
     <div class="label" style="display:flex;align-items:center;gap:5px;">
@@ -1960,10 +1922,7 @@ function toggleMenu(){
 
    <a href="#checkout" class="floating-order-btn">
       
-💰 -20% POPUST<br>
-🔥 14 DANA GARANCIJE POVRAĆAJA NOVCA<br>
-🚛 BESPLATNA DOSTAVA<br>
-       👆NARUČIM👆
+       🛒NARUČIM
 
 </a>
 
