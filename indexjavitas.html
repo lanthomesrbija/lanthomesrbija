@@ -183,34 +183,7 @@ SMALL TEXT
     font-size: 13px;
     color: #666;
 }
-    /* =========================
-GIFT BAR (GOLD)
-========================= */
-
-.gift-bar{
-    background: linear-gradient(90deg, #b8860b, #ffd700, #b8860b);
-    color: #111;
-    text-align: center;
-    padding: 10px 15px;
-    font-weight: 600;
-    font-size: 14px;
-    position: relative;
-}
-
-.gift-bar-text{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    transition: opacity 0.6s ease;
-    opacity: 0;
-}
-
-.gift-bar-text.active{
-    opacity: 1;
-    position: relative;
-}
-
+    
 /* =========================
 lebegő gomb
 ========================= */
@@ -1098,14 +1071,20 @@ function scrollToCheckout(){
  TOP BAR
 ========================= -->
 
-<div class="gift-bar">
-  <div class="gift-bar-text" id="giftText1">
-    🔥 -20% Popust
+<div class="top-bar">
+
+  <div class="top-bar-text active" id="tb1">
+    ⏳ 20% POPUSTA ZA PRVU KUPOVINU
   </div>
 
-  <div class="gift-bar-text" id="giftText2">
-    🚚Besplatna dostava širom Srbije🚚
+  <div class="top-bar-text" id="tb2">
+    🚛 BESPLATNA DOSTAVA ŠIROM SRBIJE
   </div>
+
+  <div class="top-bar-text" id="tb3">
+    📬 BRZA ISPORUKA
+  </div>
+
 </div>
 
 
