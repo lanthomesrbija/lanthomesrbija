@@ -85,7 +85,7 @@ LOGO
     background-position: center;
     background-repeat: no-repeat;
 
-    min-height: 180px;
+    min-height: 160px;
     width: 100%;
 
     display: flex;
@@ -94,11 +94,10 @@ LOGO
 }
 
 .logo-section img {
-    width: 140px;
+    width: 120px;
     max-width: 80%;
     height: auto;
 }
-    
     
 /* =========================
 HEADINGS (3D PINK)
@@ -233,13 +232,13 @@ lebegő gomb
 
 .mobile-menu{
     position:relative;
-    background:#fff;
-    padding:10px;
+    background:transparent;
+    padding:1px 3px;
     text-align:left;
 }
 
 .menu-btn{
-    font-size:30px;
+    font-size:20px;
     border:none;
     background:none;
     cursor:pointer;
@@ -356,18 +355,6 @@ Proizvodi ☰
     <!-- =========================
 RESPONSIVE HERO IMAGE
 ========================= -->
-
-<section class="hero">
-
-    <div class="hero-container">
-
-        <img src="images/Verde Fotografia Cuidados da Pele Beleza Post Facebook (1) (1).png"
-             alt="Lanthome"
-             class="hero-image">
-
-    </div>
-
-</section>
 
 <style>
 
@@ -548,7 +535,7 @@ PRODUCT WRAPPER
     font-weight:800;
     border-radius:10px;
     cursor:pointer;
-    margin-bottom:20px;
+    margin-bottom:5px;
 }
 
 /* =========================
@@ -558,7 +545,7 @@ ACCORDION
 .accordion{
     display:flex;
     flex-direction:column;
-    gap:12px;
+    gap:6px;
 }
 
 .acc-item{
@@ -608,14 +595,12 @@ RESPONSIVE
 
 <div class="product-wrapper">
 
-    <!-- LEFT -->
+    <!-- KÉP ELÖL -->
     <div class="product-image">
-        <img src="images/STOP BORA! (1).png">
-        <img src="images/Névtelen terv (9) (1).png">
-        <img src="images/Névtelen terv (10).png">
+        <img src="images/rock (480 x 272 képpont) (4).png">
     </div>
 
-    <!-- RIGHT -->
+    <!-- JOBB OLDAL: NÉV, ÁR, AKCIÓ, VÉLEMÉNY -->
     <div>
 
         <div class="product-title">Lanthome Retinol Krema-Protiv Bora</div>
@@ -627,41 +612,66 @@ RESPONSIVE
         </div>
 
         <div class="price-row">
-    <span class="badge">⭐⭐⭐⭐☆ 4.8/5 (365)Recenzije</span>
-</div>
-
+            <span class="badge">⭐⭐⭐⭐☆ 4.8/5 (365) Recenzije</span>
+        </div>
 
         <button class="buy-btn" onclick="scrollToCheckout()">🛒 NARUČIM</button>
+        
+        <div style="text-align:center; margin-top:1px; line-height:1.4;">
+    <div>💰 -20% Popust</div>
+    <div>🔥 14 dana garancije povraćaja novca</div>
+    <div>🚛 Besplatna dostava</div>
+</div>
+
+    </div>
+
+    <!-- TOVÁBBI KÉPEK -->
+    <div class="product-image">
+        <img src="images/Névtelen terv (9) (1).png">
+        <img src="images/rock (480 x 272 képpont) (6).png">
+    </div>
+
+</div>
+</div>
 
         <!-- ACCORDION -->
         <div class="accordion">
 
             <!-- OPIS -->
-            <div class="acc-item">
-                <div class="acc-header" onclick="toggle(this)">
-                    OPIS: <span class="arrow">Kliknite ovde👆</span>
-                </div>
-                <div class="acc-content">
+<div class="acc-item">
+    <div class="acc-header" onclick="toggle(this)">
+        OPIS: <span class="arrow">👆</span>
+    </div>
 
-                    Anti-age formula za obnovu, intenzivnu hidrataciju i negu kože, posebno pogodna za suvu i dehidriranu kožu.
-Pomaže da koža izgleda glatko, elastično, hidrirano i blistavo.<br><br>
+    <div class="acc-content" style="display:block;">
 
-✔ Sadrži retinol koji pomaže u smanjenju pojave finih linija i bora.<br>
-✔ Hijaluronska kiselina pomaže u intenzivnoj hidrataciji kože.<br>
-✔ Kolagen pomaže u održavanju čvrstog i elastičnog izgleda kože.<br>
-✔ Vitamin C doprinosi blistavijem i svežijem izgledu kože.<br>
-✔ Glicerin pomaže u zadržavanju vlage i posebno prija suvoj koži.<br>
-✔ Alantoin i vitamin E pružaju dodatnu negu i prijatan osećaj na koži.<br>
-✔ Brzo se upija i ne ostavlja težak, mastan osećaj.<br>
-✔ Može se koristiti kao deo svakodnevne rutine nege kože i kao podloga pre šminkanja.
+        <strong>Anti-age formula</strong> za obnovu, intenzivnu hidrataciju i negu kože, posebno pogodna za 
+        <strong>suvu i dehidriranu kožu.</strong>
+        Pomaže da koža izgleda <strong>glatko, elastično, hidrirano i blistavo.</strong><br><br>
 
-                </div>
-            </div>
+        ✔ Sadrži <strong>retinol</strong> koji pomaže u smanjenju pojave finih linija i bora.<br>
+
+        ✔ <strong>Hijaluronska kiselina</strong> pomaže u intenzivnoj hidrataciji kože.<br>
+
+        ✔ <strong>Kolagen</strong> pomaže u održavanju čvrstog i elastičnog izgleda kože.<br>
+
+        ✔ <strong>Vitamin C</strong> doprinosi blistavijem i svežijem izgledu kože.<br>
+
+        ✔ <strong>Glicerin</strong> pomaže u zadržavanju vlage i posebno prija suvoj koži.<br>
+
+        ✔ <strong>Alantoin i vitamin E</strong> pružaju dodatnu negu i prijatan osećaj na koži.<br>
+
+        ✔ <strong>Brzo se upija</strong> i ne ostavlja težak, mastan osećaj.<br>
+
+        ✔ Može se koristiti kao deo <strong>svakodnevne rutine nege kože</strong> i kao podloga pre šminkanja.
+
+    </div>
+</div>
 
             <!-- SASTOJCI -->
 <div class="acc-item">
     <div class="acc-header" onclick="toggle(this)">
-        SASTOJCI: <span class="arrow">Kliknite ovde👆</span>
+        SASTOJCI: <span class="arrow">👆</span>
     </div>
 
     <div class="acc-content">
@@ -697,7 +707,7 @@ Pomaže da koža izgleda glatko, elastično, hidrirano i blistavo.<br><br>
             <!-- UPOTREBA -->
             <div class="acc-item">
                 <div class="acc-header" onclick="toggle(this)">
-                    UPOTREBA: <span class="arrow">Kliknite ovde👆</span>
+                    UPOTREBA: <span class="arrow">👆</span>
                 </div>
                 <div class="acc-content">
 
@@ -723,7 +733,7 @@ Pomaže da koža izgleda glatko, elastično, hidrirano i blistavo.<br><br>
 <!-- PRE / POSLE -->
 <div class="acc-item">
     <div class="acc-header" onclick="toggle(this)">
-        PRE / POSLE: <span class="arrow">Kliknite ovde👆</span>
+        PRE / POSLE: <span class="arrow">👆</span>
     </div>
 
     <div class="acc-content">
@@ -740,7 +750,7 @@ Pomaže da koža izgleda glatko, elastično, hidrirano i blistavo.<br><br>
 <!-- ODOBRENJE -->
 <div class="acc-item">
     <div class="acc-header" onclick="toggle(this)">
-        ODOBRENJE: <span class="arrow">Kliknite ovde👆</span>
+        ODOBRENJE: <span class="arrow">👆</span>
     </div>
 
     <div class="acc-content">
@@ -767,7 +777,7 @@ Pomaže da koža izgleda glatko, elastično, hidrirano i blistavo.<br><br>
 
 <!-- UTISCI KUPACA -->
     <!-- UTISCI KUPACA -->
-<div class="acc-item"> <div class="acc-header" onclick="toggle(this)"> ISKUSTVA: <span class="arrow">Kliknite ovde👆</span> </div> <div class="acc-content"> <div style="text-align:center; margin-bottom:25px;"> <p style="font-size:18px; color:#555; margin:5px 0 25px;"> Prava iskustva naših kupaca </p> </div>
+<div class="acc-item"> <div class="acc-header" onclick="toggle(this)"> ISKUSTVA: <span class="arrow">👆</span> </div> <div class="acc-content"> <div style="text-align:center; margin-bottom:25px;"> <p style="font-size:18px; color:#000000; margin:5px 0 25px;"> ➡Prava iskustva naših kupaca⤵ </p> </div>
 
 <!-- KUPAC 4 -->
         <div style="margin-bottom:25px;">
@@ -1104,8 +1114,9 @@ CHECKOUT FULL SYSTEM (FINAL FIX)
 
 <!-- NOTE -->
 <div class="box">
-    <div class="label">Uštedite više!💰</div>
-    <div class="label">Izaberite paket👇 </div>
+    <div class="label" style="display:block; text-align:center;">
+        Uštedite više!💰 Izaberite paket👇
+    </div>
 
     <!-- 1x -->
     <div class="label" style="display:flex;align-items:center;gap:5px;">
@@ -1255,7 +1266,7 @@ CHECKOUT FULL SYSTEM (FINAL FIX)
     🛒 NARUČI POUZEĆEM
   </button>
 
-  <p style="margin:10px 0 0; line-height:1.4;">
+  <p style="margin:0px 0 0; line-height:1.4;">
     💰 -20% Popust<br>
 🔥 14 dana garancije povraćaja novca<br>
 🚛 Besplatna dostava
