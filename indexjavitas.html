@@ -184,9 +184,10 @@ SMALL TEXT
 }
     
 /* =========================
-lebegő gomb
+LEBEGŐ GOMB – REZGŐ
 ========================= */
-    .floating-order-btn {
+
+.floating-order-btn {
     position: fixed;
     right: 12px;
     bottom: 70px;
@@ -205,30 +206,37 @@ lebegő gomb
     text-align: center;
 
     box-shadow:
-    0 5px 10px rgba(0,0,0,0.5),
-    0 15px 25px rgba(0,0,0,0.5),
-    0 40px 60px rgba(0,0,0,0.60);
-    transition: 0.2s ease;
+        0 5px 10px rgba(0,0,0,0.5),
+        0 15px 25px rgba(0,0,0,0.5),
+        0 40px 60px rgba(0,0,0,0.60);
+
+    transition: background 0.2s ease;
+    animation: floating-vibrate 0.3s infinite;
 }
 
 .floating-order-btn:hover {
-   background: linear-gradient(90deg, #FF6B35, #FF8A5B, #FF6B35);
-    transform: translateY(-2px);
+    background: linear-gradient(90deg, #FF6B35, #FF8A5B, #FF6B35);
 }
 
+@keyframes floating-vibrate {
+    0%, 100% { translate: 0 0; }
+    25% { translate: -2px 0; }
+    50% { translate: 0 0; }
+    75% { translate: 2px 0; }
+}
 
 /* Telefonon kisebb legyen */
 @media (max-width: 600px) {
-
     .floating-order-btn {
         right: 2px;
         bottom: 20px;
-
         padding: 3px 7px;
         font-size: 16px;
         border-radius: 20px;
     }
+}
 
+    
 }
   /* HAMBURGER MENU */
 
