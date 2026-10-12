@@ -214,15 +214,18 @@ LEBEGŐ GOMB – REZGŐ
     animation: floating-vibrate 0.3s infinite;
 }
 
-.floating-order-btn:hover {
-    background: linear-gradient(90deg, #FF6B35, #FF8A5B, #FF6B35);
+.floating-order-btn {
+    animation: breathing 2.5s ease-in-out infinite;
+    transform-origin: center;
 }
 
-@keyframes floating-vibrate {
-    0%, 100% { translate: 0 0; }
-    25% { translate: -2px 0; }
-    50% { translate: 0 0; }
-    75% { translate: 2px 0; }
+@keyframes breathing {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.06);
+    }
 }
 
 /* Telefonon kisebb legyen */
