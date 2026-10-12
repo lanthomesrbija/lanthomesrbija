@@ -150,7 +150,7 @@ CTA BUTTON (BLUE)
     border-radius: 12px;
     text-decoration: none;
     margin-top: 20px;
-    box-shadow: 0 8px 20px rgba(30,102,255,0.3);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18), 0 4px 8px rgba(0, 0, 0, 0.10);
 }
 
 /* =========================
@@ -184,12 +184,13 @@ SMALL TEXT
 }
     
 /* =========================
-lebegő gomb
+LEBEGŐ GOMB – REZGŐ
 ========================= */
-    .floating-order-btn {
+
+.floating-order-btn {
     position: fixed;
-    right: 20px;
-    bottom: 100px;
+    right: 12px;
+    bottom: 70px;
     z-index: 9999;
 
     background: #FF6B35;
@@ -204,29 +205,41 @@ lebegő gomb
     line-height: 1.5;
     text-align: center;
 
-    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    box-shadow:
+        0 3px 8px rgba(0,0,0,0.5),
+        0 10px 20px rgba(0,0,0,0.5),
+        0 40px 60px rgba(0,0,0,0.60);
 
-    transition: 0.2s ease;
+    transition: background 0.2s ease;
+    animation: floating-vibrate 0.3s infinite;
 }
 
-.floating-order-btn:hover {
-   background: linear-gradient(90deg, #FF6B35, #FF8A5B, #FF6B35);
-    transform: translateY(-2px);
+.floating-order-btn {
+    animation: breathing 2.5s ease-in-out infinite;
+    transform-origin: center;
 }
 
+@keyframes breathing {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.06);
+    }
+}
 
 /* Telefonon kisebb legyen */
 @media (max-width: 600px) {
-
     .floating-order-btn {
-        right: 15px;
+        right: 2px;
         bottom: 20px;
-
-        padding: 10px 14px;
-        font-size: 18px;
+        padding: 3px 7px;
+        font-size: 16px;
         border-radius: 20px;
     }
+}
 
+    
 }
   /* HAMBURGER MENU */
 
@@ -488,18 +501,29 @@ PRODUCT WRAPPER
 
 .new-price{
     font-size:22px;
-    font-weight:800;
+    font-weight:400;
 }
 
-.badge{
-    background:#6aa84f;
-    color:#fff;
-    font-size:12px;
-    padding:4px 8px;
-    border-radius:6px;
-    font-weight:700;
+@import url('https://fonts.googleapis.com/css2?family=Benedict&display=swap');
+
+.badge {
+    background: #6aa84f;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: 700;
 }
 
+.akcija-badge {
+    font-family: 'Benedict', cursive;
+    font-weight: 300;
+    font-stretch: condensed;
+    letter-spacing: 3px;
+    transform: scaleX(0.85) rotate(-4deg);
+    display: inline-block;
+}
+    
 /* QTY */
 
 .qty-box{
@@ -579,6 +603,7 @@ ACCORDION
     line-height:1.7;
 }
 
+    
 /* =========================
 RESPONSIVE
 ========================= */
@@ -608,7 +633,7 @@ RESPONSIVE
         <div class="price-row">
             <span class="old-price">2873 RSD</span>
             <span class="new-price">2299 RSD</span>
-            <span class="badge">AKCIJA</span>
+           <span class="badge akcija-badge">AKCIJA</span>
         </div>
 
         <div class="price-row">
@@ -1133,7 +1158,7 @@ CHECKOUT FULL SYSTEM (FINAL FIX)
                  style="width:80px;height:80px;object-fit:contain;">
 
             <span style="margin-top:4px;text-align:center;">
-                Umesto <del>2.873 dinara</del>, sada samo <strong>2.299 dinara!</strong><br><strong>Ušteda:574 dinara</strong>
+                Umesto <del>2.873 dinara</del>, sada samo 2.299 dinara!<br><strong>Ušteda:574 dinara</strong>
             </span>
 
         </div>
@@ -1171,7 +1196,7 @@ CHECKOUT FULL SYSTEM (FINAL FIX)
     <span style="color:green;">✓</span> Protiv bora<br>
     <span style="color:green;">✓</span> Protiv dubokih bora
     <br><br>
-    Umesto <del>5.746 dinara</del>, sada samo <strong>3.999 dinara!</strong><br><strong>Ušteda:1747 dinara</strong>
+    Umesto <del>5.746 dinara</del>, sada samo 3.999 dinara!<br><strong>Ušteda: 1747 dinara</strong>
 </span>
 
         </div>
@@ -1214,7 +1239,7 @@ CHECKOUT FULL SYSTEM (FINAL FIX)
     <span style="color:green;">✓</span> 2x Protiv bora<br>
     <span style="color:green;">✓</span> Protiv dubokih bora
     <br><br>
-    Umesto <del>8.619 dinara</del>, sada samo <strong>5.499 dinara! +🎁Poklon</strong><br><strong>Ušteda:3120 dinara</strong>
+    Umesto <del>8.619 dinara</del>, sada samo 5.499 dinara! +🎁Poklon<br><strong>Ušteda:3120 dinara</strong>
 </span>
 
         </div>
