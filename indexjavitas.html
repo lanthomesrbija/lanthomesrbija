@@ -239,8 +239,6 @@ LEBEGŐ GOMB – REZGŐ
     }
 }
 
-    
-}
   /* HAMBURGER MENU */
 
 .mobile-menu{
@@ -471,10 +469,12 @@ PRODUCT WRAPPER
 
 /* IMAGES */
 
-.product-image img{
-    width:100%;
-    border-radius:16px;
-    margin-bottom:10px;
+.product-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    margin-bottom: 10px;
 }
 
 /* TITLE */
@@ -622,8 +622,15 @@ RESPONSIVE
 
     <!-- KÉP ELÖL -->
     <div class="product-image">
-        <img src="images/rock (480 x 272 képpont) (4).png">
-    </div>
+    <img
+        src="images/rock (480 x 272 képpont) (4).png"
+        width="480"
+        height="272"
+        fetchpriority="high"
+        decoding="async"
+        alt="Lanthome Retinol Krema"
+    >
+</div>
 
     <!-- JOBB OLDAL: NÉV, ÁR, AKCIÓ, VÉLEMÉNY -->
     <div>
